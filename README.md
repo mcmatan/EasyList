@@ -1,9 +1,9 @@
 
 
-[![Pod version](https://img.shields.io/cocoapods/v/EasyTableView.svg?style=flat)](http://cocoadocs.org/docsets/EasyTableView)
+[![Pod version](https://img.shields.io/cocoapods/v/EasyList.svg?style=flat)](http://cocoadocs.org/docsets/EasyList)
 [![Language](https://img.shields.io/badge/language-swift-orange.svg?style=flat)](https://developer.apple.com/swift)
 
-<p align = "center"><img src="https://i.imgur.com/GlCRkUL.png" alt="EasyTableView Icon"/></p>
+<p align = "center"><img src="https://i.imgur.com/GlCRkUL.png" alt="EasyList Icon"/></p>
 
 
 ## Description
@@ -33,7 +33,7 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
 
 ```
 
-## Usage EasyTableView
+## Usage EasyList
 
 ```Swift
 
@@ -53,11 +53,11 @@ self.easyTableView = EasyTableView(tableConfiguration:config)
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'EasyTableView'
+pod 'EasyList'
 ```
 
 #### Manually
-1. Download and drop ```/EasyTableView``` folder in your project.  
+1. Download and drop ```/EasyList``` folder in your project.  
 2. Congratulations!  
 
 ## Author
