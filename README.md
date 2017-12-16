@@ -7,12 +7,14 @@
 
 
 ## Description
+
 Table view made simple, just load the damn data
 
-# Uses cell reuse by the book
-# No need to try to remember all UITableView demands
-# Less code, less room for mistakes
+* **Uses cell reuse by the mechanism**
 
+* **Add a TableView in 2 seconds** 
+
+* **Less code, less room for mistakes**
 
 ## Usage Defult UITableView
 
