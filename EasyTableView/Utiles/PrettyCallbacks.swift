@@ -6,6 +6,6 @@
 import Foundation
 import UIKit
 
-typealias CompletionBlock = () -> Void
-typealias CompletionBlockParam<T> = (_ object: T) -> Void
-typealias CellConfigurationBlock = (_ cell: UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell
+public typealias CompletionBlock = () -> Void
+public typealias CompletionBlockParam<T> = (_ object: T) -> Void
+public typealias CellConfigurationBlock = (_ cell: UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell

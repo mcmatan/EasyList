@@ -18,11 +18,11 @@ public protocol EasyTableConfigurationType {
 }
 
 public struct EasyTableConfigurationSimple: EasyTableConfigurationType {
-    let cellHeight: CGFloat
-    let configureCell: CellConfigurationBlock 
-    let dataSourceCount: () -> Int
-    let  cellType: Swift.AnyClass?
-    func cellIdentifier() -> String {
+    public let cellHeight: CGFloat
+    public let configureCell: CellConfigurationBlock
+    public let dataSourceCount: () -> Int
+    public let  cellType: Swift.AnyClass?
+    public func cellIdentifier() -> String {
         return String(describing: self.cellType)
     }
 }
