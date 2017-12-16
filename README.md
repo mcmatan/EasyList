@@ -8,13 +8,15 @@
 
 ## Description
 
-Table view made simple, just load the damn data
 
-* **Uses cell reuse by the mechanism**
+* **Table view made simple, just load the damn data**
 
-* **Add a TableView in 2 seconds** 
+* **Stright forword**
 
 * **Less code, less room for mistakes**
+
+* **Cell reuse mechanism**
+
 
 ## Usage Defult UITableView
 
