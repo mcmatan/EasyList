@@ -15,7 +15,6 @@ s.author            = {
 }
 s.source            = {
 :git => 'https://github.com/mcmatan/EasyList.git' ,
-:commit => "d108f9dfc37e75fe148a509c6c3cd2a02bfa45af" ,
 :tag => "#{s.version}" }
 
 s.framework = "UIKit"
