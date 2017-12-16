@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
 
-s.name              = 'EasyTableView'
+s.name              = 'EasyList'
 s.version           = '0.0.1'
-s.summary           = 'EasyTableView'
-s.homepage          = 'https://github.com/mcmatan/EasyTableView'
+s.summary           = 'EasyList'
+s.homepage          = 'https://github.com/mcmatan/EasyList'
 s.ios.deployment_target = '8.0'
 s.platform = :ios, '8.0'
 s.license           = {
@@ -14,11 +14,11 @@ s.author            = {
 'YOURNAME' => 'Matan'
 }
 s.source            = {
-:git => 'https://github.com/mcmatan/EasyTableView.git',
+:git => 'https://github.com/mcmatan/EasyList.git',
 :tag => "#{s.version}" }
 
 s.framework = "UIKit"
-s.source_files      = 'EasyTableView*' , 'Vendor/*', 'Resource/*', 'EasyTableView/classes/*'
+s.source_files      = 'EasyList*' , 'Vendor/*', 'Resource/*', 'EasyList/classes/*'
 s.requires_arc      = true
 
 end

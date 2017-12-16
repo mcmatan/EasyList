@@ -1,5 +1,5 @@
 use_frameworks!
 
 target 'ExampleProject' do
-  pod 'EasyTableView', :path => '../'
+  pod 'EasyList', :path => '../'
 end
