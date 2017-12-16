@@ -18,7 +18,7 @@ s.source            = {
 :tag => "#{s.version}" }
 
 s.framework = "UIKit"
-s.source_files      = 'EasyTableView*' , 'Vendor/*', 'Resource/*', 'EasyTableView/EasyTableView/*'
+s.source_files      = 'EasyTableView*' , 'Vendor/*', 'Resource/*', 'EasyTableView/classes/*'
 s.requires_arc      = true
 
 end
