@@ -37,11 +37,11 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
 
 ```Swift
 
-let config = EasyTableConfigurationSimple.init(cellHeight: 50, configureCell: { (cell, indexPath) -> UITableViewCell in
+let config = EasyListConfigurationSimple.init(cellHeight: 50, configureCell: { (cell, indexPath) -> UITableViewCell in
             cell.textLabel?.text = String(indexPath.row)
             return cell
         }, dataSourceCount: self.dataSourceCount, cellType: UITableViewCell.self)
-self.easyTableView = EasyTableView(tableConfiguration:config)
+self.easyListView = EasyListView(tableConfiguration:config)
         
 ```
 
