@@ -10,7 +10,7 @@ import UIKit
 import EasyList
 
 class ViewController: UIViewController {
-    var easyListView: EasyListView?
+    var easyList: EasyList?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,14 +19,14 @@ class ViewController: UIViewController {
             cell.textLabel?.text = String(indexPath.row)
             return cell
         }, dataSourceCount: self.dataSourceCount, cellType: UITableViewCell.self)
-        self.easyListView = EasyListView(tableConfiguration:config)
-        self.view.addSubview(self.easyListView!)
-        self.easyListView?.translatesAutoresizingMaskIntoConstraints = false
+        self.easyList = EasyList(tableConfiguration:config)
+        self.view.addSubview(self.easyList!)
+        self.easyList?.translatesAutoresizingMaskIntoConstraints = false
         self.view.translatesAutoresizingMaskIntoConstraints = false
-        self.easyListView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        self.easyListView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-        self.easyListView?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        self.easyListView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        self.easyList?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        self.easyList?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        self.easyList?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        self.easyList?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
     
     func dataSourceCount() -> Int {

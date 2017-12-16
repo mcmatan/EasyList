@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-public protocol EasyListViewType {
+public protocol EasyListType {
     init(tableConfiguration: EasyListConfigurationType)
 }
 
-public class EasyListView: UITableView, UITableViewDelegate, UITableViewDataSource {
+public class EasyList: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     private let customCellIdentifier = "customCellIdentifier"
     private let tableConfiguration: EasyListConfigurationType
