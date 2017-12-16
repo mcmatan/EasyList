@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double EasyTableViewVersionNumber;
-FOUNDATION_EXPORT const unsigned char EasyTableViewVersionString[];
+FOUNDATION_EXPORT double EasyListVersionNumber;
+FOUNDATION_EXPORT const unsigned char EasyListVersionString[];
 

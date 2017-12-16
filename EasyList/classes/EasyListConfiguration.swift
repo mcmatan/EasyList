@@ -11,7 +11,7 @@ import UIKit
 
 public typealias CellConfigurationBlock = (_ cell: UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell
 
-public protocol EasyTableConfigurationType {
+public protocol EasyListConfigurationType {
     var cellHeight: CGFloat { get }
     var configureCell: CellConfigurationBlock { get }
     var dataSourceCount: () -> Int { get }
@@ -19,7 +19,7 @@ public protocol EasyTableConfigurationType {
     func cellIdentifier() -> String
 }
 
-public struct EasyTableConfigurationSimple: EasyTableConfigurationType {
+public struct EasyListConfigurationSimple: EasyListConfigurationType {
     public let cellHeight: CGFloat
     public let configureCell: CellConfigurationBlock
     public let dataSourceCount: () -> Int

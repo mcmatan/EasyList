@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4F834AE2659BFFCE5742F3DE5E8FB2AB'
-               BlueprintName = 'EasyTableView'
+               BlueprintIdentifier = '64C3F1CD33E9314F60D775CFCD5945CB'
+               BlueprintName = 'EasyList'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'EasyTableView.framework'>
+               BuildableName = 'EasyList.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

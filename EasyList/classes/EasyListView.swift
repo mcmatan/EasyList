@@ -9,16 +9,16 @@
 import Foundation
 import UIKit
 
-public protocol EasyTableViewType {
-    init(tableConfiguration: EasyTableConfigurationType)
+public protocol EasyListViewType {
+    init(tableConfiguration: EasyListConfigurationType)
 }
 
-public class EasyTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
+public class EasyListView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     private let customCellIdentifier = "customCellIdentifier"
-    private let tableConfiguration: EasyTableConfigurationType
+    private let tableConfiguration: EasyListConfigurationType
     
-    public init(tableConfiguration: EasyTableConfigurationType){
+    public init(tableConfiguration: EasyListConfigurationType){
         self.tableConfiguration = tableConfiguration
         super.init(frame: .zero, style: .plain)
         self.delegate = self

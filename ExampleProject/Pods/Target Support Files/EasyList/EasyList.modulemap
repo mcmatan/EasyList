@@ -1,0 +1,6 @@
+framework module EasyList {
+  umbrella header "EasyList-umbrella.h"
+
+  export *
+  module * { export * }
+}
