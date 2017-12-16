@@ -16,7 +16,6 @@
 		8A77439A1FE41BB400038296 /* EasyTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7743991FE41BB400038296 /* EasyTableViewUITests.swift */; };
 		8A7743A91FE41BD500038296 /* EasyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7743A81FE41BD500038296 /* EasyTableView.swift */; };
 		8A7743AB1FE46A4300038296 /* EasyTableConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7743AA1FE46A4300038296 /* EasyTableConfiguration.swift */; };
-		FD435D6F2D8DEB0F0EC5B191 /* PrettyCallbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD43525B1A60D949F0DEEEA9 /* PrettyCallbacks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		8A77439B1FE41BB400038296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A7743A81FE41BD500038296 /* EasyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyTableView.swift; sourceTree = "<group>"; };
 		8A7743AA1FE46A4300038296 /* EasyTableConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyTableConfiguration.swift; sourceTree = "<group>"; };
-		FD43525B1A60D949F0DEEEA9 /* PrettyCallbacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyCallbacks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +108,6 @@
 				8A7743801FE41BB400038296 /* Assets.xcassets */,
 				8A7743821FE41BB400038296 /* LaunchScreen.storyboard */,
 				8A7743851FE41BB400038296 /* Info.plist */,
-				FD435AD79568614396EBC34E /* Utiles */,
 			);
 			path = EasyTableView;
 			sourceTree = "<group>";
@@ -140,14 +137,6 @@
 				8A7743AA1FE46A4300038296 /* EasyTableConfiguration.swift */,
 			);
 			path = EasyTableView;
-			sourceTree = "<group>";
-		};
-		FD435AD79568614396EBC34E /* Utiles */ = {
-			isa = PBXGroup;
-			children = (
-				FD43525B1A60D949F0DEEEA9 /* PrettyCallbacks.swift */,
-			);
-			path = Utiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +277,6 @@
 				8A77437C1FE41BB400038296 /* ViewController.swift in Sources */,
 				8A77437A1FE41BB400038296 /* AppDelegate.swift in Sources */,
 				8A7743A91FE41BD500038296 /* EasyTableView.swift in Sources */,
-				FD435D6F2D8DEB0F0EC5B191 /* PrettyCallbacks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

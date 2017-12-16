@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+public typealias CellConfigurationBlock = (_ cell: UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell
+
 public protocol EasyTableConfigurationType {
     var cellHeight: CGFloat { get }
     var configureCell: CellConfigurationBlock { get }
