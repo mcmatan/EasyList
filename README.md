@@ -35,8 +35,7 @@ let config = EasyTableConfigurationSimple.init(cellHeight: 50, configureCell: { 
             cell.textLabel?.text = String(indexPath.row)
             return cell
         }, dataSourceCount: self.dataSourceCount, cellType: UITableViewCell.self)
-        self.easyTableView = EasyTableView(tableConfiguration:config)
-        self.view.addSubview(self.easyTableView!)
+self.easyTableView = EasyTableView(tableConfiguration:config)
         
 ```
 
