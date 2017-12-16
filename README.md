@@ -3,11 +3,15 @@
 [![Pod version](https://img.shields.io/cocoapods/v/EasyTableView.svg?style=flat)](http://cocoadocs.org/docsets/EasyTableView)
 [![Language](https://img.shields.io/badge/language-swift-orange.svg?style=flat)](https://developer.apple.com/swift)
 
-<p align = "center"><img src="https://i.imgur.com/SWkSf5L.png" alt="EasyTableView Icon"/></p>
+<p align = "center"><img src="https://i.imgur.com/GlCRkUL.png" alt="EasyTableView Icon"/></p>
 
 
 ## Description
 Table view made simple, just load the damn data
+
+# Uses cell reuse by the book
+# No need to try to remember all UITableView demands
+# Less code, less room for mistakes
 
 
 ## Usage Defult UITableView
