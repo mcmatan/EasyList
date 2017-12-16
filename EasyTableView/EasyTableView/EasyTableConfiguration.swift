@@ -27,4 +27,11 @@ public struct EasyTableConfigurationSimple: EasyTableConfigurationType {
     public func cellIdentifier() -> String {
         return String(describing: self.cellType)
     }
+    
+    public init(cellHeight: CGFloat, configureCell: @escaping CellConfigurationBlock, dataSourceCount: @escaping () -> Int, cellType: Swift.AnyClass?) {
+        self.cellHeight = cellHeight
+        self.configureCell = configureCell
+        self.dataSourceCount = dataSourceCount
+        self.cellType = cellType
+    }
 }
