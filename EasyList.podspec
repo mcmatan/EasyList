@@ -14,11 +14,11 @@ s.author            = {
 'YOURNAME' => 'Matan'
 }
 s.source            = {
-:git => 'https://github.com/mcmatan/EasyList.git',
+:git => 'https://github.com/mcmatan/EasyList.git' , :commit => "d108f9dfc37e75fe148a509c6c3cd2a02bfa45af" }
 :tag => "#{s.version}" }
 
 s.framework = "UIKit"
-s.source_files      = 'NAME_OF_PODt*' , 'Vendor/*', 'Resource/*', 'NAME_OF_POD/classes/*'
+s.source_files      = 'EasyList*' , 'Vendor/*', 'Resource/*', 'EasyList/classes/*'
 s.requires_arc      = true
 
 end
