@@ -22,7 +22,7 @@
     "EasyTableView*",
     "Vendor/*",
     "Resource/*",
-    "EasyTableView/EasyTableView/*"
+    "EasyTableView/classes/*"
   ],
   "requires_arc": true
 }
