@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol EasyTableConfigurationType {
+public protocol EasyTableConfigurationType {
     var cellHeight: CGFloat { get }
     var configureCell: CellConfigurationBlock { get }
     var dataSourceCount: () -> Int { get }
@@ -17,7 +17,7 @@ protocol EasyTableConfigurationType {
     func cellIdentifier() -> String
 }
 
-struct EasyTableConfigurationSimple: EasyTableConfigurationType {
+public struct EasyTableConfigurationSimple: EasyTableConfigurationType {
     let cellHeight: CGFloat
     let configureCell: CellConfigurationBlock 
     let dataSourceCount: () -> Int
