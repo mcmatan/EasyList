@@ -18,7 +18,7 @@
 * **Cell reuse mechanism**
 
 
-## Usage Defult UITableView
+## Usage: Defult UITableView
 
 ```Swift
 
@@ -35,7 +35,7 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
 
 ```
 
-## Usage EasyList
+## Usage: EasyList
 
 ```Swift
 
