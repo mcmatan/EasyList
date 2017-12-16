@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name              = 'EasyList'
-s.version           = '0.0.3'
+s.version           = '0.0.4'
 s.summary           = 'EasyList'
 s.homepage          = 'https://github.com/mcmatan/EasyList'
 s.ios.deployment_target = '8.0'
