@@ -18,7 +18,7 @@ public class EasyTableView: UITableView, UITableViewDelegate, UITableViewDataSou
     private let customCellIdentifier = "customCellIdentifier"
     private let tableConfiguration: EasyTableConfigurationType
     
-    init(tableConfiguration: EasyTableConfigurationType){
+    public init(tableConfiguration: EasyTableConfigurationType){
         self.tableConfiguration = tableConfiguration
         super.init(frame: .zero, style: .plain)
         self.delegate = self

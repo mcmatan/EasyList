@@ -15,11 +15,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.easyTableView = EasyTableView(tableConfiguration:
-            EasyTableConfigurationSimple(cellHeight: 50, configureCell: { (cell, indexPath) -> UITableViewCell in
-                cell.textLabel?.text = String(indexPath.row)
-                return cell
-            }, dataSourceCount: self.dataSourceCount, cellType: UITableViewCell.self))
+        let config = EasyTableConfigurationSimple.init(cellHeight: 50, configureCell: { (cell, indexPath) -> UITableViewCell in
+            cell.textLabel?.text = String(indexPath.row)
+            return cell
+        }, dataSourceCount: self.dataSourceCount, cellType: UITableViewCell.self)
+        self.easyTableView = EasyTableView(tableConfiguration:config)
         self.view.addSubview(self.easyTableView!)
         self.easyTableView?.translatesAutoresizingMaskIntoConstraints = false
         self.view.translatesAutoresizingMaskIntoConstraints = false
