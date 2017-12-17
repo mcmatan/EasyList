@@ -44,4 +44,12 @@ public class EasyList: UITableView, UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.tableConfiguration.cellHeight
     }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let isCell = tableView.cellForRow(at: indexPath) {
+            self.tableConfiguration.didSelectCellBlock(isCell, indexPath)
+        } else {
+            print("ERROR: EasyList did select unkown cell")
+        }
+    }
 }

@@ -18,7 +18,12 @@ class ViewController: UIViewController {
         let config = EasyListConfigurationSimple.init(cellHeight: 50, configureCell: { (cell, indexPath) -> UITableViewCell in
             cell.textLabel?.text = String(indexPath.row)
             return cell
-        }, dataSourceCount: self.dataSourceCount, cellType: UITableViewCell.self)
+        }, dataSourceCount: { () -> Int in
+            return 50
+        }, cellType: UITableViewCell.self) { (cell, indexPath) in
+            print("Did select indexPath \(indexPath)")
+        }
+        
         self.easyList = EasyList(tableConfiguration:config)
         self.view.addSubview(self.easyList!)
         self.easyList?.translatesAutoresizingMaskIntoConstraints = false
