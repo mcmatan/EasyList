@@ -33,16 +33,22 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {}
 
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
+
 ```
 
 ## Usage: EasyList
 
 ```Swift
 
-let config = EasyListConfigurationSimple.init(cellHeight: 50, configureCell: { (cell, indexPath) -> UITableViewCell in
+ let config = EasyListConfigurationSimple.init(cellHeight: 50, configureCell: { (cell, indexPath) -> UITableViewCell in
             cell.textLabel?.text = String(indexPath.row)
             return cell
-        }, dataSourceCount: self.dataSourceCount, cellType: UITableViewCell.self)
+        }, dataSourceCount: { () -> Int in
+            return 50
+        }, cellType: UITableViewCell.self) { (cell, indexPath) in
+            print("Did select indexPath \(indexPath)")
+        }
 self.easyListView = EasyListView(tableConfiguration:config)
         
 ```
