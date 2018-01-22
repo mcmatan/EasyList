@@ -16,7 +16,8 @@
 		ADC5E6DBD8E3622650574D69CE43F51A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		C1BEC38F4212ED1FAF61864C38BD2591 /* EasyList.podspec in Sources */ = {isa = PBXBuildFile; fileRef = 0387316F9507963F5848037148AC5A6C /* EasyList.podspec */; };
 		ECEE6CA652BA0A3714B53A68B8F3AB18 /* Pods-ExampleProject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EBB56599F2377DF7DE179FC0A543CC /* Pods-ExampleProject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FBE9626B02480D0BBFF89077FD82A39C /* EasyListConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E3B62387777958CEF6443B2BAEBC31 /* EasyListConfiguration.swift */; };
+		FBE9626B02480D0BBFF89077FD82A39C /* EasyListConfigurationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E3B62387777958CEF6443B2BAEBC31 /* EasyListConfigurationType.swift */; };
+		FD4356CA29F336BB26C981F4 /* EasyListConfigurationSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD435D3CED30F0805CFEA74A /* EasyListConfigurationSimple.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,11 +49,12 @@
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		CC02B7FC8E2CD04DB8FDA0606D0D424F /* EasyList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EBB56599F2377DF7DE179FC0A543CC /* Pods-ExampleProject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExampleProject-umbrella.h"; sourceTree = "<group>"; };
-		D5E3B62387777958CEF6443B2BAEBC31 /* EasyListConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EasyListConfiguration.swift; sourceTree = "<group>"; };
+		D5E3B62387777958CEF6443B2BAEBC31 /* EasyListConfigurationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EasyListConfigurationType.swift; sourceTree = "<group>"; };
 		D80E7E962BF65BC1E785AE0703D8C17E /* Pods_ExampleProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EC456D5A1FBBCFDE2C4132CA426948D9 /* EasyList-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyList-prefix.pch"; sourceTree = "<group>"; };
 		FB9C8ADFBCF4D3FCBBDB05EE7D2F9FE4 /* EasyList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EasyList.swift; sourceTree = "<group>"; };
+		FD435D3CED30F0805CFEA74A /* EasyListConfigurationSimple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyListConfigurationSimple.swift; sourceTree = "<group>"; };
 		FEB1E7083218ADE72AF496344A0E5CA0 /* Pods-ExampleProject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleProject-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,8 +127,9 @@
 		744745734A75E73BFA8D2B6C49B4FAEC /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				D5E3B62387777958CEF6443B2BAEBC31 /* EasyListConfiguration.swift */,
+				D5E3B62387777958CEF6443B2BAEBC31 /* EasyListConfigurationType.swift */,
 				FB9C8ADFBCF4D3FCBBDB05EE7D2F9FE4 /* EasyList.swift */,
+				FD435D3CED30F0805CFEA74A /* EasyListConfigurationSimple.swift */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -281,8 +284,9 @@
 			files = (
 				2A87FAB73E561F021BAD2CBE88E0CAA4 /* EasyList-dummy.m in Sources */,
 				C1BEC38F4212ED1FAF61864C38BD2591 /* EasyList.podspec in Sources */,
-				FBE9626B02480D0BBFF89077FD82A39C /* EasyListConfiguration.swift in Sources */,
+				FBE9626B02480D0BBFF89077FD82A39C /* EasyListConfigurationType.swift in Sources */,
 				588D40C1B86CAF0715577383208223DD /* EasyList.swift in Sources */,
+				FD4356CA29F336BB26C981F4 /* EasyListConfigurationSimple.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
