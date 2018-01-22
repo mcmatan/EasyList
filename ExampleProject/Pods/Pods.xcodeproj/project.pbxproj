@@ -129,7 +129,7 @@
 			children = (
 				D5E3B62387777958CEF6443B2BAEBC31 /* EasyListConfigurationType.swift */,
 				FB9C8ADFBCF4D3FCBBDB05EE7D2F9FE4 /* EasyList.swift */,
-				FD435D3CED30F0805CFEA74A /* EasyListConfigurationSimple.swift */,
+				8A65359C2015FBFB00E4AE31 /* Configurations */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -143,6 +143,14 @@
 				2052C2AC35DFAB66A52DF3749083221D /* Products */,
 				9CE5F89E67AC836848A721561E4D3BEB /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8A65359C2015FBFB00E4AE31 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				FD435D3CED30F0805CFEA74A /* EasyListConfigurationSimple.swift */,
+			);
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 		9CE5F89E67AC836848A721561E4D3BEB /* Targets Support Files */ = {

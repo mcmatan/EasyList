@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4292f03b-0ac0-409f-ba3e-eead6ea2c851" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationSimple.swift" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../EasyList/classes/Configurations/EasyListConfigurationSelectable.swift" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../EasyList/classes/Configurations/EasyListConfigurationSimple.swift" />
       <change beforePath="$PROJECT_DIR$/../EasyList/classes/EasyList.swift" afterPath="$PROJECT_DIR$/../EasyList/classes/EasyList.swift" />
-      <change beforePath="$PROJECT_DIR$/../EasyList/classes/EasyListConfiguration.swift" afterPath="$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationType.swift" />
+      <change beforePath="$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationSimple.swift" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationType.swift" afterPath="$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationType.swift" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/ExampleProject.xcworkspace/xcuserdata/matancohen.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/ExampleProject.xcworkspace/xcuserdata/matancohen.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
-      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/matancohen.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/matancohen.xcuserdatad/xcschemes/xcschememanagement.plist" />
     </list>
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/ExampleProject-bgcmzgsbagberhfqmgltpkjmfyfh/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,29 +36,17 @@
         <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationType.swift">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="74" />
+              <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EasyListConfigurationSimple.swift" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationSimple.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="58" lean-forward="true" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
-              <folding>
-                <element signature="e#45#62#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EasyList.swift" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EasyList.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyList.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state relative-caret-position="465">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -194,12 +183,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1516609478424</updated>
-      <workItem from="1516609481365" duration="4089000" />
+      <workItem from="1516609481365" duration="4682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4089000" />
+    <option name="totallyTimeSpent" value="4682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="-255" width="2560" height="1413" extended-state="6" />
@@ -245,18 +234,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyList.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationType.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="74" />
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -265,9 +246,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="58" lean-forward="true" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
-          <folding>
-            <element signature="e#45#62#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyList.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

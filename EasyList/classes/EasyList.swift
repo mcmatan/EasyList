@@ -21,8 +21,8 @@ public class EasyList: UITableView {
     public init(tableConfiguration: EasyListConfigurationType){
         self.tableConfiguration = tableConfiguration
         super.init(frame: .zero, style: .plain)
-        self.delegate = tableConfiguration.dataSourceAndDelegate
-        self.dataSource = tableConfiguration.dataSourceAndDelegate
+        self.delegate = tableConfiguration.getDataSourceAndDelegate()
+        self.dataSource = tableConfiguration.getDataSourceAndDelegate()
         self.register(tableConfiguration.cellType, forCellReuseIdentifier: tableConfiguration.cellIdentifier())
     }
     

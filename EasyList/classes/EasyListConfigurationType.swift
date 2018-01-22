@@ -19,5 +19,5 @@ public protocol EasyListConfigurationType: class {
     var dataSourceCount: () -> Int { get }
     var cellType: Swift.AnyClass? { get }
     func cellIdentifier() -> String
-    var dataSourceAndDelegate: UITableViewDelegate & UITableViewDataSource { get set }
+    func getDataSourceAndDelegate() -> UITableViewDelegate & UITableViewDataSource 
 }
