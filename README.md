@@ -19,6 +19,7 @@
 
 * **Supports multiple cell types**
 
+* **Autocomplete, don't re think once again about delegate functions to implement**
 
 ## Usage: Defult UITableView
 
