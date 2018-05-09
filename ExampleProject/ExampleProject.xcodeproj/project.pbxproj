@@ -14,6 +14,7 @@
 		8A7743C71FE5828600038296 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7743C51FE5828600038296 /* LaunchScreen.storyboard */; };
 		8A7743D21FE5828600038296 /* ExampleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7743D11FE5828600038296 /* ExampleProjectTests.swift */; };
 		8A7743DD1FE5828700038296 /* ExampleProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7743DC1FE5828700038296 /* ExampleProjectUITests.swift */; };
+		8AA87E1E20A3727400E61D24 /* AutoSizingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA87E1D20A3727400E61D24 /* AutoSizingCell.swift */; };
 		FFD987D6809AD5985933C863 /* Pods_ExampleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9EFBAEFD0DD49F2B16A3BC /* Pods_ExampleProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		8A7743D81FE5828600038296 /* ExampleProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A7743DC1FE5828700038296 /* ExampleProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProjectUITests.swift; sourceTree = "<group>"; };
 		8A7743DE1FE5828700038296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AA87E1D20A3727400E61D24 /* AutoSizingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSizingCell.swift; sourceTree = "<group>"; };
 		B2276553ADD47A9935053EF2 /* Pods-ExampleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleProject/Pods-ExampleProject.debug.xcconfig"; sourceTree = "<group>"; };
 		BB9EFBAEFD0DD49F2B16A3BC /* Pods_ExampleProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D34CEB53F0046B432508C60D /* Pods-ExampleProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleProject/Pods-ExampleProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				8A7743BC1FE5828600038296 /* AppDelegate.swift */,
 				8A7743BE1FE5828600038296 /* ViewController.swift */,
+				8AA87E1D20A3727400E61D24 /* AutoSizingCell.swift */,
 				8A7743C01FE5828600038296 /* Main.storyboard */,
 				8A7743C31FE5828600038296 /* Assets.xcassets */,
 				8A7743C51FE5828600038296 /* LaunchScreen.storyboard */,
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A7743BF1FE5828600038296 /* ViewController.swift in Sources */,
+				8AA87E1E20A3727400E61D24 /* AutoSizingCell.swift in Sources */,
 				8A7743BD1FE5828600038296 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

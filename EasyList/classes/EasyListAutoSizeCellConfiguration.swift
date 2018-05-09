@@ -5,24 +5,33 @@
 import Foundation
 import UIKit
 
-public class EasyListConfiguration: EasyListConfigurationType {
-    public var cellThemeBlock: CellThemeBlock
+public class EasyListAutoSizeCellConfiguration: EasyListConfigurationType {
+    public var cellThemeBlock: CellAutoSizeThemeBlock
     public let cellSetParamsBlock: CellSetParamsBlock
     public let didSelectCellBlock: DidSelectCellBlock
     public let dataSourceCount: () -> Int
+    public let estimatedHeight: CGFloat
     
     lazy var dataSourceAndDelegate: UITableViewDelegate & UITableViewDataSource = {
-        return EasyListConfigurationSimpleDelegateProvider(easyListConfigurationType: self)
+        return EasyListAutoSizeCellConfigurationDelegateProvider(configuration: self)
     }()
+    
+    public func configureTableView(tableView: UITableView) {
+        tableView.estimatedRowHeight = self.estimatedHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
     
     public func getDataSourceAndDelegate() -> UITableViewDelegate & UITableViewDataSource {
         return self.dataSourceAndDelegate
-    }    
+    }
 
-    public init(cellThemeBlock: @escaping CellThemeBlock,
+    public init(cellThemeBlock: @escaping CellAutoSizeThemeBlock,
                 dataSourceCount: @escaping () -> Int,
                 cellSetParamsBlock: @escaping CellSetParamsBlock,
-                didSelect didSelectCellBlock: @escaping DidSelectCellBlock) {
+                didSelect didSelectCellBlock: @escaping DidSelectCellBlock,
+                estimatedHeight: CGFloat
+                ) {
+        self.estimatedHeight = estimatedHeight
         self.cellThemeBlock = cellThemeBlock
         self.dataSourceCount = dataSourceCount
         self.cellSetParamsBlock = cellSetParamsBlock
@@ -30,11 +39,11 @@ public class EasyListConfiguration: EasyListConfigurationType {
     }
 }
 
-public class EasyListConfigurationSimpleDelegateProvider: NSObject, UITableViewDelegate, UITableViewDataSource {
-    weak var configuration: EasyListConfigurationType!
+public class EasyListAutoSizeCellConfigurationDelegateProvider: NSObject, UITableViewDelegate, UITableViewDataSource {
+    weak var configuration: EasyListAutoSizeCellConfiguration!
     
-    init(easyListConfigurationType: EasyListConfigurationType) {
-        self.configuration = easyListConfigurationType
+    init(configuration: EasyListAutoSizeCellConfiguration) {
+        self.configuration = configuration
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,11 +64,6 @@ public class EasyListConfigurationSimpleDelegateProvider: NSObject, UITableViewD
         }
         
         return self.configuration.cellSetParamsBlock(cell!, indexPath)
-    }
-    
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let currentTheme = self.configuration.cellThemeBlock(indexPath)
-        return currentTheme.height
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

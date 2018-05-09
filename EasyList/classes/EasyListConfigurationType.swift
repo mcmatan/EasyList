@@ -25,15 +25,27 @@ public struct CellTheme {
     }
 }
 
+public struct CellAutoSizeTheme {
+    public let type: Swift.AnyClass?
+    public let cellIdentifier: String
+    
+    public init(
+    
+        type: Swift.AnyClass?,
+        cellIdentifier: String
+        ) {
+        self.type = type
+        self.cellIdentifier = cellIdentifier
+    }
+}
+
 public typealias CellSetParamsBlock = (_ cell: UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell
 public typealias CellThemeBlock = (_ indexPath: IndexPath) -> CellTheme
 public typealias DidSelectCellBlock = (_ cell: UITableViewCell, _ indexPath: IndexPath) -> Void
+public typealias CellAutoSizeThemeBlock = (_ indexPath: IndexPath) -> CellAutoSizeTheme
 
 
 public protocol EasyListConfigurationType: class {
-    var cellThemeBlock: CellThemeBlock { get }
-    var dataSourceCount: () -> Int { get }
-    var cellSetParamsBlock: CellSetParamsBlock { get }
-    var didSelectCellBlock: DidSelectCellBlock { get }
-    func getDataSourceAndDelegate() -> UITableViewDelegate & UITableViewDataSource 
+    func getDataSourceAndDelegate() -> UITableViewDelegate & UITableViewDataSource
+    func configureTableView(tableView: UITableView)
 }

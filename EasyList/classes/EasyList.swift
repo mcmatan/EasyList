@@ -27,6 +27,7 @@ public class EasyList: UITableView {
         self.easyListConfigurationType = easyListConfigurationType
         self.delegate = self.easyListConfigurationType!.getDataSourceAndDelegate()
         self.dataSource = self.easyListConfigurationType!.getDataSourceAndDelegate()
+        self.easyListConfigurationType!.configureTableView(tableView: self)
     }
     
     required public init?(coder aDecoder: NSCoder) {
