@@ -47,7 +47,9 @@ And this is without event adding to over head of multiple cell types!!
 
         let config = EasyListConfiguration.init(
             cellThemeBlock: { IndexPath -> CellTheme in
-            return CellTheme.init(height: 50, type: UITableViewCell.self, cellIdentifier: "SomeCellIdentifier")
+            return CellTheme.init(height: 50,
+            type: UITableViewCell.self,
+            cellIdentifier: "SomeCellIdentifier")
         }, dataSourceCount: { () -> Int in
             return 50
         }, cellSetParamsBlock: { (cell, indexPath) -> UITableViewCell in
