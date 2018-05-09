@@ -17,7 +17,7 @@
 		C1BEC38F4212ED1FAF61864C38BD2591 /* EasyList.podspec in Sources */ = {isa = PBXBuildFile; fileRef = 0387316F9507963F5848037148AC5A6C /* EasyList.podspec */; };
 		ECEE6CA652BA0A3714B53A68B8F3AB18 /* Pods-ExampleProject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EBB56599F2377DF7DE179FC0A543CC /* Pods-ExampleProject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FBE9626B02480D0BBFF89077FD82A39C /* EasyListConfigurationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E3B62387777958CEF6443B2BAEBC31 /* EasyListConfigurationType.swift */; };
-		FD4356CA29F336BB26C981F4 /* EasyListConfigurationSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD435D3CED30F0805CFEA74A /* EasyListConfigurationSimple.swift */; };
+		FD4356CA29F336BB26C981F4 /* EasyListConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD435D3CED30F0805CFEA74A /* EasyListConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EC456D5A1FBBCFDE2C4132CA426948D9 /* EasyList-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyList-prefix.pch"; sourceTree = "<group>"; };
 		FB9C8ADFBCF4D3FCBBDB05EE7D2F9FE4 /* EasyList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EasyList.swift; sourceTree = "<group>"; };
-		FD435D3CED30F0805CFEA74A /* EasyListConfigurationSimple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyListConfigurationSimple.swift; sourceTree = "<group>"; };
+		FD435D3CED30F0805CFEA74A /* EasyListConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyListConfiguration.swift; sourceTree = "<group>"; };
 		FEB1E7083218ADE72AF496344A0E5CA0 /* Pods-ExampleProject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleProject-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +129,7 @@
 			children = (
 				D5E3B62387777958CEF6443B2BAEBC31 /* EasyListConfigurationType.swift */,
 				FB9C8ADFBCF4D3FCBBDB05EE7D2F9FE4 /* EasyList.swift */,
-				FD435D3CED30F0805CFEA74A /* EasyListConfigurationSimple.swift */,
+				FD435D3CED30F0805CFEA74A /* EasyListConfiguration.swift */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -286,7 +286,7 @@
 				C1BEC38F4212ED1FAF61864C38BD2591 /* EasyList.podspec in Sources */,
 				FBE9626B02480D0BBFF89077FD82A39C /* EasyListConfigurationType.swift in Sources */,
 				588D40C1B86CAF0715577383208223DD /* EasyList.swift in Sources */,
-				FD4356CA29F336BB26C981F4 /* EasyListConfigurationSimple.swift in Sources */,
+				FD4356CA29F336BB26C981F4 /* EasyListConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

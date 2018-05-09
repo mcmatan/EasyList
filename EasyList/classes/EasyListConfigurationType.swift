@@ -9,15 +9,31 @@
 import Foundation
 import UIKit
 
-public typealias CellConfigurationBlock = (_ cell: UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell
+public struct CellTheme {
+    public let height: CGFloat
+    public let type: Swift.AnyClass?
+    public let cellIdentifier: String
+    
+    public init(
+        height: CGFloat,
+        type: Swift.AnyClass?,
+        cellIdentifier: String
+        ) {
+        self.height = height
+        self.type = type
+        self.cellIdentifier = cellIdentifier
+    }
+}
+
+public typealias CellSetParamsBlock = (_ cell: UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell
+public typealias CellThemeBlock = (_ indexPath: IndexPath) -> CellTheme
 public typealias DidSelectCellBlock = (_ cell: UITableViewCell, _ indexPath: IndexPath) -> Void
 
+
 public protocol EasyListConfigurationType: class {
-    var cellHeight: CGFloat { get }
-    var configureCell: CellConfigurationBlock { get }
-    var didSelectCellBlock: DidSelectCellBlock { get }
+    var cellThemeBlock: CellThemeBlock { get }
     var dataSourceCount: () -> Int { get }
-    var cellType: Swift.AnyClass? { get }
-    func cellIdentifier() -> String
+    var cellSetParamsBlock: CellSetParamsBlock { get }
+    var didSelectCellBlock: DidSelectCellBlock { get }
     func getDataSourceAndDelegate() -> UITableViewDelegate & UITableViewDataSource 
 }

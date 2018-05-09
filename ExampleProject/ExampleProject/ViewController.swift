@@ -15,16 +15,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let config = EasyListConfigurationSimple.init(cellHeight: 50, configureCell: { (cell, indexPath) -> UITableViewCell in
-            cell.textLabel?.text = String(indexPath.row)
-            return cell
+        let config = EasyListConfiguration.init(
+            cellThemeBlock: { IndexPath -> CellTheme in
+            return CellTheme.init(height: 50, type: UITableViewCell.self, cellIdentifier: "SomeCellIdentifier")
         }, dataSourceCount: { () -> Int in
             return 50
-        }, cellType: UITableViewCell.self) { (cell, indexPath) in
+        }, cellSetParamsBlock: { (cell, indexPath) -> UITableViewCell in
+            cell.textLabel?.text = String(indexPath.row)
+            return cell
+        }) { (cell, indexPath) in
             print("Did select indexPath \(indexPath)")
         }
         
-        self.easyList = EasyList(tableConfiguration:config)
+    
+        self.easyList = EasyList.init(config)
         self.view.addSubview(self.easyList!)
         self.easyList?.translatesAutoresizingMaskIntoConstraints = false
         self.view.translatesAutoresizingMaskIntoConstraints = false

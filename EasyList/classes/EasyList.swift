@@ -14,16 +14,17 @@ public protocol EasyListType {
 }
 
 public class EasyList: UITableView {
+    private var easyListConfigurationType: EasyListConfigurationType?
     
-    private let customCellIdentifier = "customCellIdentifier"
-    private let tableConfiguration: EasyListConfigurationType
-    
-    public init(tableConfiguration: EasyListConfigurationType){
-        self.tableConfiguration = tableConfiguration
+    public init(_ easyListConfigurationType: EasyListConfigurationType){
         super.init(frame: .zero, style: .plain)
-        self.delegate = tableConfiguration.getDataSourceAndDelegate()
-        self.dataSource = tableConfiguration.getDataSourceAndDelegate()
-        self.register(tableConfiguration.cellType, forCellReuseIdentifier: tableConfiguration.cellIdentifier())
+        self.setConfiguration(easyListConfigurationType)
+    }
+    
+    public func setConfiguration(_ easyListConfigurationType: EasyListConfigurationType) {
+        self.easyListConfigurationType = easyListConfigurationType
+        self.delegate = self.easyListConfigurationType!.getDataSourceAndDelegate()
+        self.dataSource = self.easyListConfigurationType!.getDataSourceAndDelegate()
     }
     
     required public init?(coder aDecoder: NSCoder) {

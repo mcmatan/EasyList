@@ -5,12 +5,11 @@
 import Foundation
 import UIKit
 
-public class EasyListConfigurationSimple: EasyListConfigurationType {
-    public let cellHeight: CGFloat
-    public let configureCell: CellConfigurationBlock
+public class EasyListConfiguration: EasyListConfigurationType {
+    public var cellThemeBlock: CellThemeBlock
+    public let cellSetParamsBlock: CellSetParamsBlock
     public let didSelectCellBlock: DidSelectCellBlock
     public let dataSourceCount: () -> Int
-    public let cellType: Swift.AnyClass?
     
     lazy var dataSourceAndDelegate: UITableViewDelegate & UITableViewDataSource = {
         return EasyListConfigurationSimpleDelegateProvider(easyListConfigurationType: self)
@@ -18,22 +17,16 @@ public class EasyListConfigurationSimple: EasyListConfigurationType {
     
     public func getDataSourceAndDelegate() -> UITableViewDelegate & UITableViewDataSource {
         return self.dataSourceAndDelegate
-    }
+    }    
 
-    public func cellIdentifier() -> String {
-        return String(describing: self.cellType)
-    }
-
-    public init(cellHeight: CGFloat,
-                configureCell: @escaping CellConfigurationBlock,
+    public init(cellThemeBlock: @escaping CellThemeBlock,
                 dataSourceCount: @escaping () -> Int,
-                cellType: Swift.AnyClass?,
-                didSelectCellBlock: @escaping DidSelectCellBlock) {
-        self.didSelectCellBlock = didSelectCellBlock
-        self.cellHeight = cellHeight
-        self.configureCell = configureCell
+                cellSetParamsBlock: @escaping CellSetParamsBlock,
+                didSelect didSelectCellBlock: @escaping DidSelectCellBlock) {
+        self.cellThemeBlock = cellThemeBlock
         self.dataSourceCount = dataSourceCount
-        self.cellType = cellType
+        self.cellSetParamsBlock = cellSetParamsBlock
+        self.didSelectCellBlock = didSelectCellBlock
     }
 }
 
@@ -49,14 +42,24 @@ public class EasyListConfigurationSimpleDelegateProvider: NSObject, UITableViewD
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.configuration.cellIdentifier()) else {
-            return UITableViewCell()
+        let currentTheme = self.configuration.cellThemeBlock(indexPath)
+        let cellIdentidier = currentTheme.cellIdentifier
+        
+        var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: cellIdentidier)
+        if cell === nil {
+            tableView.register(currentTheme.type.self!, forCellReuseIdentifier: cellIdentidier)
+            cell = tableView.dequeueReusableCell(withIdentifier: cellIdentidier)
+            if cell === nil {
+                assertionFailure("No matching cell")
+            }
         }
-        return self.configuration.configureCell(cell, indexPath)
+        
+        return self.configuration.cellSetParamsBlock(cell!, indexPath)
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.configuration.cellHeight
+        let currentTheme = self.configuration.cellThemeBlock(indexPath)
+        return currentTheme.height
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
