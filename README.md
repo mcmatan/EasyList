@@ -17,6 +17,8 @@
 
 * **Cell reuse mechanism**
 
+* **Supports multiple cell types**
+
 
 ## Usage: Defult UITableView
 
@@ -37,19 +39,26 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
 
 ```
 
+And this is without event adding to over head of multiple cell types!!
+
 ## Usage: EasyList
 
 ```Swift
 
- let config = EasyListConfigurationSimple.init(cellHeight: 50, configureCell: { (cell, indexPath) -> UITableViewCell in
-            cell.textLabel?.text = String(indexPath.row)
-            return cell
+        let config = EasyListConfiguration.init(
+            cellThemeBlock: { IndexPath -> CellTheme in
+            return CellTheme.init(height: 50, type: UITableViewCell.self, cellIdentifier: "SomeCellIdentifier")
         }, dataSourceCount: { () -> Int in
             return 50
-        }, cellType: UITableViewCell.self) { (cell, indexPath) in
+        }, cellSetParamsBlock: { (cell, indexPath) -> UITableViewCell in
+            cell.textLabel?.text = String(indexPath.row)
+            return cell
+        }) { (cell, indexPath) in
             print("Did select indexPath \(indexPath)")
         }
-self.easyListView = EasyListView(tableConfiguration:config)
+        
+    
+        self.easyList = EasyList.init(config)
         
 ```
 
