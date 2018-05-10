@@ -6,8 +6,7 @@ import Foundation
 import UIKit
 
 public class EasyListAutoSizeCellConfiguration: EasyListConfigurationType {
-    public var cellThemeBlock: CellAutoSizeThemeBlock
-    public let cellSetParamsBlock: CellSetParamsBlock
+    public let iCellConfigurationForIndexPath : (_ indexPath: IndexPath) -> ICellConfiguration
     public let didSelectCellBlock: DidSelectCellBlock
     public let dataSourceCount: () -> Int
     public let estimatedHeight: CGFloat
@@ -25,16 +24,15 @@ public class EasyListAutoSizeCellConfiguration: EasyListConfigurationType {
         return self.dataSourceAndDelegate
     }
 
-    public init(cellThemeBlock: @escaping CellAutoSizeThemeBlock,
+    public init(
+                iCellConfigurationForIndexPath : @escaping (_ indexPath: IndexPath) -> ICellConfiguration,
                 dataSourceCount: @escaping () -> Int,
-                cellSetParamsBlock: @escaping CellSetParamsBlock,
                 didSelect didSelectCellBlock: @escaping DidSelectCellBlock,
                 estimatedHeight: CGFloat
                 ) {
+        self.iCellConfigurationForIndexPath = iCellConfigurationForIndexPath
         self.estimatedHeight = estimatedHeight
-        self.cellThemeBlock = cellThemeBlock
         self.dataSourceCount = dataSourceCount
-        self.cellSetParamsBlock = cellSetParamsBlock
         self.didSelectCellBlock = didSelectCellBlock
     }
 }
@@ -51,19 +49,19 @@ public class EasyListAutoSizeCellConfigurationDelegateProvider: NSObject, UITabl
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let currentTheme = self.configuration.cellThemeBlock(indexPath)
-        let cellIdentidier = currentTheme.cellIdentifier
+        let cellConfigurationForIndexPath = self.configuration.iCellConfigurationForIndexPath(indexPath)
+        let cellIdentidier = String(describing: cellConfigurationForIndexPath.type)
         
-        var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: cellIdentidier)
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentidier)
         if cell === nil {
-            tableView.register(currentTheme.type.self!, forCellReuseIdentifier: cellIdentidier)
+            tableView.register(cellConfigurationForIndexPath.type.self, forCellReuseIdentifier: cellIdentidier)
             cell = tableView.dequeueReusableCell(withIdentifier: cellIdentidier)
             if cell === nil {
                 assertionFailure("No matching cell")
             }
         }
         
-        return self.configuration.cellSetParamsBlock(cell!, indexPath)
+        return cellConfigurationForIndexPath.configure(cell!, indexPath) as! UITableViewCell
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

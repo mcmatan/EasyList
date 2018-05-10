@@ -14,6 +14,25 @@
 
 import Foundation
 
+class SomeCell: UITableViewCell {
+    
+}
+
+public protocol ICellConfiguration {
+    var configure: ((_ cell: UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell) { get }
+    var type: Swift.AnyClass { get }
+}
+
+public class CellConfiguration<T>: ICellConfiguration {
+    public let configure: ((_ cell:UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell)
+    public let type: Swift.AnyClass
+    
+    public init(configure: @escaping ((_ cell:T, _ indexPath: IndexPath) -> T) ) {
+        self.type = T.self as! AnyClass
+        self.configure = configure as! ((_ cell: UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell)
+    }
+}
+
 public class EasyListConfiguration: EasyListConfigurationType {
     
     public var cellThemeBlock: CellThemeBlock

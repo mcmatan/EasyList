@@ -45,16 +45,32 @@ class ViewController: UIViewController {
     }
     
     private func setupAutoSizingConfiguration() {
+        
+        let cellConfiguration = CellConfiguration { (cell , indexPath) -> AutoSizingCell in
+            cell.textLabel?.text = "bla"
+            return cell
+        }
         let config = EasyListAutoSizeCellConfiguration.init(
-            cellThemeBlock: { indexPath -> CellAutoSizeTheme in
-            return CellAutoSizeTheme.init(type: AutoSizingCell.self, cellIdentifier: "Cell")
+            iCellConfigurationForIndexPath: { indexPath -> ICellConfiguration in
+            return cellConfiguration
         }, dataSourceCount: { () -> Int in
             return 50
-        }, cellSetParamsBlock: { (cell, indexPath) -> UITableViewCell in
-            return cell
         }, didSelect: { (cell, indexPath) in
             //
         }, estimatedHeight: 100)
+        
+        
+        
+//        let config = EasyListAutoSizeCellConfiguration.init(
+//            cellThemeBlock: { indexPath -> CellAutoSizeTheme in
+//            return CellAutoSizeTheme.init(type: AutoSizingCell.self, cellIdentifier: "Cell")
+//        }, dataSourceCount: { () -> Int in
+//            return 50
+//        }, cellSetParamsBlock: { (cell, indexPath) -> UITableViewCell in
+//            return cell
+//        }, didSelect: { (cell, indexPath) in
+//            //
+//        }, estimatedHeight: 100)
         
         self.easyList = EasyList.init(config)
     }
