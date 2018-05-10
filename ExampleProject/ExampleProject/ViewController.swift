@@ -47,11 +47,22 @@ class ViewController: UIViewController {
     private func setupAutoSizingConfiguration() {
         
         let cellConfiguration = CellConfiguration { (cell , indexPath) -> AutoSizingCell in
-            cell.textLabel?.text = "bla"
+            cell.setText("blablablablablablablablablablablablablablablablablablablablablablablablablablabla blablablablablablablablablablablablablablablablablablablablablablablablablablabla blablablablablablablablablablablablablablablablablablablablablablablablablablabla blablablablablablablablablablablablablablablablablablablablablablablablablablabla blablablablablablablablablablablablablablablablablablablablablablablablablablabla blablablablablablablablablablablablablablablablablablablablablablablablablablabla")
             return cell
         }
+
+        let cellConfiguration2 = CellConfiguration { (cell, indexPath) -> AutoSizingCell2 in
+            cell.setText("da   da   da   da   da da   da   da   da   da da   da   da   da   da da   da   da   da   da ")
+            return cell
+        }
+
         let config = EasyListAutoSizeCellConfiguration.init(
             iCellConfigurationForIndexPath: { indexPath -> ICellConfiguration in
+                
+                if (indexPath.row == 5) {
+                    return cellConfiguration2
+                }
+                
             return cellConfiguration
         }, dataSourceCount: { () -> Int in
             return 50
@@ -60,17 +71,6 @@ class ViewController: UIViewController {
         }, estimatedHeight: 100)
         
         
-        
-//        let config = EasyListAutoSizeCellConfiguration.init(
-//            cellThemeBlock: { indexPath -> CellAutoSizeTheme in
-//            return CellAutoSizeTheme.init(type: AutoSizingCell.self, cellIdentifier: "Cell")
-//        }, dataSourceCount: { () -> Int in
-//            return 50
-//        }, cellSetParamsBlock: { (cell, indexPath) -> UITableViewCell in
-//            return cell
-//        }, didSelect: { (cell, indexPath) in
-//            //
-//        }, estimatedHeight: 100)
         
         self.easyList = EasyList.init(config)
     }

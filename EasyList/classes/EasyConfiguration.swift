@@ -14,9 +14,6 @@
 
 import Foundation
 
-class SomeCell: UITableViewCell {
-    
-}
 
 public protocol ICellConfiguration {
     var configure: ((_ cell: UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell) { get }
@@ -24,12 +21,22 @@ public protocol ICellConfiguration {
 }
 
 public class CellConfiguration<T>: ICellConfiguration {
-    public let configure: ((_ cell:UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell)
+    public var configure: ((_ cell:UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell) {
+        get {
+            return { (cell , indexPath) -> UITableViewCell in
+                let configuredCell = self.configureMy(cell as! T, indexPath)
+                return configuredCell as! UITableViewCell
+            }
+        }
+    }
+    public var configureMy: ((_ cell:T, _ indexPath: IndexPath) -> T)
     public let type: Swift.AnyClass
+    
     
     public init(configure: @escaping ((_ cell:T, _ indexPath: IndexPath) -> T) ) {
         self.type = T.self as! AnyClass
-        self.configure = configure as! ((_ cell: UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell)
+        self.configureMy = configure
+        
     }
 }
 
