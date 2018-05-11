@@ -21,16 +21,16 @@ Configuration type: EasyListConfigurationDefault, Supports multiple cell types, 
 ```Swift
 
 let cellConfiguration = CellConfiguration { (cell, indexPath) -> YourCustomCell in
-        cell.setText("You know you shook me. You shook me all night long.")
-        return cell
+    cell.setText("You know you shook me. You shook me all night long.")
+    return cell
 }
 let config = EasyListConfigurationDefault.init(
         cellConfiguration: { indexPath -> CellConfigurationType in
-        return cellConfiguration
-}, dataSourceCount: { () -> Int in
-        return 50
+            return cellConfiguration
+        }, dataSourceCount: { () -> Int in
+    return 50
 }, rowHeight: { indexPath -> CGFloat in
-        return 50
+    return 50
 }) { (selectedCell, selectedIndexPath) in
         ///Did select cell
 }
@@ -44,21 +44,21 @@ Configuration type: EasyListConfigurationAutoSizingCells, Supports multiple cell
 ```Swift
 
 let cellConfiguration = CellConfiguration { (cell, indexPath) -> YourCustomCell in
-         cell.setText("In the days of my youth, I was told what it means to be a man")
-        return cell
+    cell.setText("In the days of my youth, I was told what it means to be a man")
+    return cell
 }
 let cellConfiguration2 = CellConfiguration { (cell, indexPath) -> YourCustomCellWithDinamicSize in
-        cell.setText("Good Times, Bad Times, you know I've had my share")
-        return cell
+    cell.setText("Good Times, Bad Times, you know I've had my share")
+    return cell
 }
 let config = EasyListConfigurationAutoSizingCells.init(
         cellConfiguration: { indexPath -> CellConfigurationType in
-        if (indexPath.row == 5) {
-        return cellConfiguration2
-        }
-        return cellConfiguration
-}, dataSourceCount: { () -> Int in
-        return 50
+         if (indexPath.row == 5) {
+                return cellConfiguration2
+         }
+          return cellConfiguration 
+        }, dataSourceCount: { () -> Int in
+     return 50
 }, estimatedRowsHeight: 100) { (selectedCell, selectedIndexPath) in
         ///Did select cell
 }
