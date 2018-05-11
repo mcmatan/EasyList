@@ -70,7 +70,7 @@ self.easyList = EasyList.init(config)
 ## Installation
 
 #### Cocoapods
-**ImageScaleTransition** is available through [CocoaPods](http://cocoapods.org). To install
+**EasyList** is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
