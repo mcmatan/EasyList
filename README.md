@@ -21,14 +21,14 @@ Configuration type: EasyListConfigurationDefault, Supports multiple cell types, 
 ```Swift
 
 let cellConfiguration = CellConfiguration { (cell, indexPath) -> YourCustomCell in
-    cell.setText("You know you shook me. You shook me all night long.")
+    cell.setText(self.dataSource[indexPath.row])
     return cell
 }
 let config = EasyListConfigurationDefault.init(
         cellConfiguration: { indexPath -> CellConfigurationType in
             return cellConfiguration
         }, dataSourceCount: { () -> Int in
-    return 50
+    return self.dataSource.count
 }, rowHeight: { indexPath -> CGFloat in
     return 50
 }) { (selectedCell, selectedIndexPath) in
@@ -44,11 +44,11 @@ Configuration type: EasyListConfigurationAutoSizingCells, Supports multiple cell
 ```Swift
 
 let cellConfiguration = CellConfiguration { (cell, indexPath) -> YourCustomCell in
-    cell.setText("In the days of my youth, I was told what it means to be a man")
+    cell.setText(self.dataSource[indexPath.row])
     return cell
 }
 let cellConfiguration2 = CellConfiguration { (cell, indexPath) -> YourCustomCellWithDinamicSize in
-    cell.setText("Good Times, Bad Times, you know I've had my share")
+    cell.setText(self.dataSource[indexPath.row])
     return cell
 }
 let config = EasyListConfigurationAutoSizingCells.init(
@@ -58,7 +58,7 @@ let config = EasyListConfigurationAutoSizingCells.init(
          }
           return cellConfiguration 
         }, dataSourceCount: { () -> Int in
-     return 50
+     return self.dataSource.count
 }, estimatedRowsHeight: 100) { (selectedCell, selectedIndexPath) in
         ///Did select cell
 }
