@@ -76,7 +76,7 @@ After creating the amount of cell configuration blocks you need, choose your 'Ea
 
 Create it, pass CellConfiguration for index path, and the rest of the params (Should be autocompleted)
 
-Reload is called as any UITableView (It is at the end, just a tableView), with reloadData()
+Reload is called as any UITableView (It is at the end, just a tableView) using: "reloadData()"
 
 And you are ready to go! (:
 
