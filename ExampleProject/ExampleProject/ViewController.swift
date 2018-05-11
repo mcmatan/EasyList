@@ -16,8 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
      
         self.setupAutoSizingConfiguration()
-        //self.setupSimpleConfiguration()
-        
+//        self.setupDefaultConfiguration()
         self.view.addSubview(self.easyList!)
         self.easyList?.translatesAutoresizingMaskIntoConstraints = false
         self.view.translatesAutoresizingMaskIntoConstraints = false
@@ -27,20 +26,21 @@ class ViewController: UIViewController {
         self.easyList?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
     
-    private func setupSimpleConfiguration() {
-        let config = EasyListConfiguration.init(
-            cellThemeBlock: { IndexPath -> CellTheme in
-                return CellTheme.init(height: 50, type: UITableViewCell.self, cellIdentifier: "SomeCellIdentifier")
+    private func setupDefaultConfiguration() {
+        let cellConfiguration = CellConfiguration { (cell, indexPath) -> UITableViewCell in
+            cell.textLabel?.text = "bla bla"
+            return cell
+        }
+        let config = EasyListConfigurationDefault.init(
+            cellConfigurationType: { indexPath -> CellConfigurationType in
+                return cellConfiguration
         }, dataSourceCount: { () -> Int in
             return 50
-        }, cellSetParamsBlock: { (cell, indexPath) -> UITableViewCell in
-            cell.textLabel?.text = String(indexPath.row)
-            return cell
+        }, rowHeight: { indexPath -> CGFloat in
+            return 50
         }) { (cell, indexPath) in
-            print("Did select indexPath \(indexPath)")
+            //
         }
-        
-        
         self.easyList = EasyList.init(config)
     }
     
@@ -55,22 +55,19 @@ class ViewController: UIViewController {
             cell.setText("da   da   da   da   da da   da   da   da   da da   da   da   da   da da   da   da   da   da ")
             return cell
         }
-
-        let config = EasyListAutoSizeCellConfiguration.init(
-            iCellConfigurationForIndexPath: { indexPath -> ICellConfiguration in
-                
+        
+        let config = EasyListConfigurationAutoSizingCells.init(
+            cellConfigurationType: { indexPath -> CellConfigurationType in
                 if (indexPath.row == 5) {
                     return cellConfiguration2
                 }
                 
-            return cellConfiguration
+                return cellConfiguration
         }, dataSourceCount: { () -> Int in
             return 50
-        }, didSelect: { (cell, indexPath) in
-            //
-        }, estimatedHeight: 100)
-        
-        
+        }, estimatedHeight: 100) { (cell, indexPath) in
+            ///
+        }
         
         self.easyList = EasyList.init(config)
     }
@@ -83,5 +80,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-}
 
+}

@@ -5,14 +5,14 @@
 import Foundation
 import UIKit
 
-public class EasyListAutoSizeCellConfiguration: EasyListConfigurationType {
-    public let iCellConfigurationForIndexPath : (_ indexPath: IndexPath) -> ICellConfiguration
+public class EasyListConfigurationAutoSizingCells: EasyListConfigurationType {
+    public let cellConfigurationType: (_ indexPath: IndexPath) -> CellConfigurationType
     public let didSelectCellBlock: DidSelectCellBlock
     public let dataSourceCount: () -> Int
     public let estimatedHeight: CGFloat
     
     lazy var dataSourceAndDelegate: UITableViewDelegate & UITableViewDataSource = {
-        return EasyListAutoSizeCellConfigurationDelegateProvider(configuration: self)
+        return AutoSizingCellsDataDelegateProvider(configuration: self)
     }()
     
     public func configureTableView(tableView: UITableView) {
@@ -25,22 +25,22 @@ public class EasyListAutoSizeCellConfiguration: EasyListConfigurationType {
     }
 
     public init(
-                iCellConfigurationForIndexPath : @escaping (_ indexPath: IndexPath) -> ICellConfiguration,
-                dataSourceCount: @escaping () -> Int,
-                didSelect didSelectCellBlock: @escaping DidSelectCellBlock,
-                estimatedHeight: CGFloat
+            cellConfigurationType: @escaping (_ indexPath: IndexPath) -> CellConfigurationType,
+            dataSourceCount: @escaping () -> Int,
+            estimatedHeight: CGFloat,
+            didSelectCellBlock: @escaping DidSelectCellBlock
                 ) {
-        self.iCellConfigurationForIndexPath = iCellConfigurationForIndexPath
+        self.cellConfigurationType = cellConfigurationType
         self.estimatedHeight = estimatedHeight
         self.dataSourceCount = dataSourceCount
         self.didSelectCellBlock = didSelectCellBlock
     }
 }
 
-public class EasyListAutoSizeCellConfigurationDelegateProvider: NSObject, UITableViewDelegate, UITableViewDataSource {
-    weak var configuration: EasyListAutoSizeCellConfiguration!
+public class AutoSizingCellsDataDelegateProvider: NSObject, UITableViewDelegate, UITableViewDataSource {
+    weak var configuration: EasyListConfigurationAutoSizingCells!
     
-    init(configuration: EasyListAutoSizeCellConfiguration) {
+    init(configuration: EasyListConfigurationAutoSizingCells) {
         self.configuration = configuration
     }
     
@@ -49,26 +49,26 @@ public class EasyListAutoSizeCellConfigurationDelegateProvider: NSObject, UITabl
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellConfigurationForIndexPath = self.configuration.iCellConfigurationForIndexPath(indexPath)
-        let cellIdentidier = String(describing: cellConfigurationForIndexPath.type)
+        let cellConfigurationForIndexPath = self.configuration.cellConfigurationType(indexPath)
+        let identifier = String(describing: cellConfigurationForIndexPath.type)
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentidier)
+        var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
         if cell === nil {
-            tableView.register(cellConfigurationForIndexPath.type.self, forCellReuseIdentifier: cellIdentidier)
-            cell = tableView.dequeueReusableCell(withIdentifier: cellIdentidier)
+            tableView.register(cellConfigurationForIndexPath.type.self, forCellReuseIdentifier: identifier)
+            cell = tableView.dequeueReusableCell(withIdentifier: identifier)
             if cell === nil {
                 assertionFailure("No matching cell")
             }
         }
         
-        return cellConfigurationForIndexPath.configure(cell!, indexPath) as! UITableViewCell
+        return cellConfigurationForIndexPath.configure(cell!, indexPath)
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let isCell = tableView.cellForRow(at: indexPath) {
             self.configuration.didSelectCellBlock(isCell, indexPath)
         } else {
-            print("ERROR: EasyList did select unkown cell")
+            print("ERROR: EasyList did select unknown cell")
         }
     }
 }
