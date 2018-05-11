@@ -68,13 +68,11 @@ self.easyList = EasyList.init(config)
 
 ## In detail
 
-'CellConfiguration' block is used to define different cell types; Set Its return type to your custom cell, and set Its params.
-
+'CellConfiguration' block is used to define different cell types.
+Set Its return type to your custom cell, and set Its params.
 After creating the amount of cell configuration blocks you need, choose your 'EasyListConfiguration' type:
-
-EasyListConfigurationAutoSizingCells for auto sizing cells
-EasyListConfigurationDefault static cell sizes
-
+- EasyListConfigurationAutoSizingCells for auto sizing cells
+- EasyListConfigurationDefault static cell sizes
 Create it, pass CellConfiguration for index path, and the rest of the params (Should be autocompleted)
 
 And you are ready to go! (:
