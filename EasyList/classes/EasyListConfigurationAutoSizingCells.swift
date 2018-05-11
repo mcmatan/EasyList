@@ -5,6 +5,7 @@
 import Foundation
 import UIKit
 
+//Supports multiple cell types, dynamic cell height
 public class EasyListConfigurationAutoSizingCells: EasyListConfigurationType {
     public let cellConfigurationType: (_ indexPath: IndexPath) -> CellConfigurationType
     public let didSelectCellBlock: DidSelectCellBlock

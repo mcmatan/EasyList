@@ -15,6 +15,7 @@
 import Foundation
 import UIKit
 
+//Supports multiple cell types, static height
 public class EasyListConfigurationDefault: EasyListConfigurationType {
     public let cellConfigurationType: (_ indexPath: IndexPath) -> CellConfigurationType
     public let didSelectCellBlock: DidSelectCellBlock

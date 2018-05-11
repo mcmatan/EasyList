@@ -12,6 +12,7 @@ import EasyList
 class ViewController: UIViewController {
     var easyList: EasyList?
     let showAutoSizingCellExample = true
+    var dataSource = ["a","b","c","d","e","f","g"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +28,22 @@ class ViewController: UIViewController {
         self.easyList?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         self.easyList?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         self.easyList?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            self.changeDataSource()
+        }
+    }
+    
+    private func changeDataSource() {
+        self.dataSource = ["b","b","b","b","b","b","b","b","b"]
+        self.easyList?.reloadData()
     }
 
     private func setupDefaultConfiguration() {
+        
         let cellConfiguration = CellConfiguration { (cell, indexPath) -> UITableViewCell in
-            cell.textLabel?.text = "You know you shook me. You shook me all night long. You know you shook me, baby. You shook me all night long. You shook me so hard, baby. Baby, baby, please come home."
+            cell.textLabel?.text = self.dataSource[indexPath.row]
             return cell
         }
 
@@ -39,7 +51,7 @@ class ViewController: UIViewController {
                 cellConfiguration: { indexPath -> CellConfigurationType in
                     return cellConfiguration
                 }, dataSourceCount: { () -> Int in
-            return 50
+            return self.dataSource.count
         }, rowHeight: { indexPath -> CGFloat in
             return 50
         }) { (selectedCell, selectedIndexPath) in
@@ -50,11 +62,13 @@ class ViewController: UIViewController {
 
     private func setupAutoSizingConfiguration() {
         let cellConfiguration = CellConfiguration { (cell, indexPath) -> AutoSizingCell in
-            cell.setText("In the days of my youth, I was told what it means to be a man,Now Ive reached that age, I've tried to do all those things the best I can. No matter how I try, I find my way into the same old jam")
+            let text = self.dataSource[indexPath.row]
+            cell.setText(text)
             return cell
         }
         let cellConfiguration2 = CellConfiguration { (cell, indexPath) -> AutoSizingCell2 in
-            cell.setText("Good Times, Bad Times, you know I've had my share When my woman left home for a brown eyed man, Well, I still don't seem to care")
+            let text = self.dataSource[indexPath.row]
+            cell.setText(text)
             return cell
         }
         let config = EasyListConfigurationAutoSizingCells.init(
@@ -65,11 +79,12 @@ class ViewController: UIViewController {
 
                     return cellConfiguration
                 }, dataSourceCount: { () -> Int in
-            return 50
+            return self.dataSource.count
         }, estimatedRowsHeight: 100) { (selectedCell, selectedIndexPath) in
             ///
         }
         self.easyList = EasyList.init(config)
+        
     }
 
     func dataSourceCount() -> Int {

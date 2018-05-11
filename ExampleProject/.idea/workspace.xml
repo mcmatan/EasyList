@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4292f03b-0ac0-409f-ba3e-eead6ea2c851" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../EasyList/classes/CellConfiguration.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/CellConfiguration.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EasyList/classes/EasyList.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/EasyList.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationAutoSizingCells.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationAutoSizingCells.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationDefault.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationDefault.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationType.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationType.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExampleProject/AutoSizingCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ExampleProject/AutoSizingCell.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleProject.xcworkspace/xcuserdata/matancohen.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/ExampleProject.xcworkspace/xcuserdata/matancohen.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExampleProject/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ExampleProject/ViewController.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/ExampleProject-bgcmzgsbagberhfqmgltpkjmfyfh/" />
@@ -24,8 +22,8 @@
       <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ExampleProject/ViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="52" column="66" selection-start-line="52" selection-start-column="66" selection-end-line="52" selection-end-column="66" />
+            <state relative-caret-position="845">
+              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
             </state>
           </provider>
         </entry>
@@ -70,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationDefault.swift">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
               <folding>
                 <element signature="e#194#211#0" expanded="true" />
               </folding>
@@ -94,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationAutoSizingCells.swift">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="333">
-              <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+              <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -228,12 +226,12 @@
       <option name="presentableId" value="Default" />
       <updated>1516609478424</updated>
       <workItem from="1516609481365" duration="4682000" />
-      <workItem from="1526028169504" duration="2155000" />
+      <workItem from="1526028169504" duration="3103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6837000" />
+    <option name="totallyTimeSpent" value="7785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -309,14 +307,14 @@
     <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationAutoSizingCells.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
-          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationDefault.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
             <element signature="e#194#211#0" expanded="true" />
           </folding>
@@ -346,8 +344,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ExampleProject/ViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="52" column="66" selection-start-line="52" selection-start-column="66" selection-end-line="52" selection-end-column="66" />
+        <state relative-caret-position="845">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
