@@ -21,7 +21,7 @@ Configuration type: EasyListConfigurationDefault, Supports multiple cell types, 
 ```Swift
 
 let cellConfiguration = CellConfiguration { (cell, indexPath) -> YourCustomCell in
-        cell.textLabel?.text = "You know you shook me. You shook me all night long."
+        cell.setText("You know you shook me. You shook me all night long.")
         return cell
 }
 let config = EasyListConfigurationDefault.init(
