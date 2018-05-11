@@ -6,7 +6,7 @@
 <p align = "center"><img src="https://i.imgur.com/GlCRkUL.png" alt="EasyList Icon"/></p>
 
 
-## Description
+## Why EasyList
 
 
 EasyList is a UITableView subclass, that will help you create type-safe lists, with less code, and easier to read and maintain.
@@ -17,9 +17,7 @@ EasyList is a new way of dealing with simple to complex table views, with a gene
 
 
 
-
-
-## Usage: EasyList: EasyListConfigurationDefault
+## Usage: EasyListConfigurationDefault
 Supports multiple cell types, static height
 
 ```Swift
@@ -43,7 +41,7 @@ Supports multiple cell types, static height
 
 ```
 
-## Usage: EasyList: EasyListConfigurationAutoSizingCells
+## Usage: EasyListConfigurationAutoSizingCells
 Supports multiple cell types, dynamic cell height
 
 ```Swift
