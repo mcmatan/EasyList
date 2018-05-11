@@ -8,11 +8,27 @@
 import Foundation
 import UIKit
 
-// MARK: Use 'Cell Configuration' every time 'Cell Configuration Type' is referred
+/*
+ Use 'CellConfiguration' every time 'CellConfigurationType' is referred
+*/
+
 public protocol CellConfigurationType {
     var configure: ((_ cell: UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell) { get }
     var type: Swift.AnyClass { get }
 }
+
+/*
+ Example usage:
+ 
+ let cellConfiguration = CellConfiguration { (cell, indexPath) -> YourCustomCell in
+    cell.textLabel?.text = "Some text..."
+    return cell
+ }
+ 
+ 'YourCustomCell' type must be the currect cell type you would like to render.
+ Or just use default UITableViewCell
+ 
+ */
 
 public class CellConfiguration<T>: CellConfigurationType {
     public var configure: ((_ cell:UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell) {

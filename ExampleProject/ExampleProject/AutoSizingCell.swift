@@ -21,11 +21,8 @@ class AutoSizingCell: UITableViewCell {
         someLabel.leftAnchor.constraint(equalTo: self.contentView.leftAnchor).isActive = true
         someLabel.rightAnchor.constraint(equalTo: self.contentView.rightAnchor).isActive = true
         someLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
-        
         someLabel.backgroundColor = UIColor.gray
         someLabel.textColor = UIColor.green
-        
-        
         someLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -51,11 +48,8 @@ class AutoSizingCell2: UITableViewCell {
         someLabel.leftAnchor.constraint(equalTo: self.contentView.leftAnchor).isActive = true
         someLabel.rightAnchor.constraint(equalTo: self.contentView.rightAnchor).isActive = true
         someLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
-        
         someLabel.backgroundColor = UIColor.blue
         someLabel.textColor = UIColor.red
-        
-        
         someLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
