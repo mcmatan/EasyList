@@ -15,7 +15,7 @@ As probably know, using UITableView forces you to implement delegate pattern, sw
 
 EasyList is a new way of dealing with simple to complex table views, with a generic functional approach.
 
-## Basic usage: 
+## Basic usage
 Configuration type: EasyListConfigurationDefault, Supports multiple cell types, static height
 
 ```Swift
