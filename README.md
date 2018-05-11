@@ -66,10 +66,6 @@ self.easyList = EasyList.init(config)
 
 ```
 
-How does it work:
-
-By passing 'CellConfiguration' EasyList will register the generic type you have used for the return value, and let you configure it without casting.
-
 
 ## Installation
 
