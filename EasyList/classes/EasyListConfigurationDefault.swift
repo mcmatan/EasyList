@@ -63,7 +63,6 @@ public class EasyListConfigurationSimpleDelegateProvider: NSObject, UITableViewD
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellConfigurationForIndexPath = self.configuration.cellConfigurationType(indexPath)
         let identifier = String(describing: cellConfigurationForIndexPath.type)
-
         var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
         if cell === nil {
             tableView.register(cellConfigurationForIndexPath.type.self, forCellReuseIdentifier: identifier)
@@ -72,7 +71,6 @@ public class EasyListConfigurationSimpleDelegateProvider: NSObject, UITableViewD
                 assertionFailure("No matching cell")
             }
         }
-
         return cellConfigurationForIndexPath.configure(cell!, indexPath)
     }
     

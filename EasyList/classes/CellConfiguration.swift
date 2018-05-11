@@ -17,7 +17,6 @@ public class CellConfiguration<T>: CellConfigurationType {
     public var configure: ((_ cell:UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell) {
         get {
             return { (cell , indexPath) -> UITableViewCell in
-                
                 if let isSameType = cell as? T {
                     let configuredCell = self.configureMy(isSameType, indexPath)
                     return configuredCell as! UITableViewCell

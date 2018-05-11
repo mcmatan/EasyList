@@ -51,7 +51,6 @@ public class AutoSizingCellsDataDelegateProvider: NSObject, UITableViewDelegate,
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellConfigurationForIndexPath = self.configuration.cellConfigurationType(indexPath)
         let identifier = String(describing: cellConfigurationForIndexPath.type)
-        
         var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
         if cell === nil {
             tableView.register(cellConfigurationForIndexPath.type.self, forCellReuseIdentifier: identifier)
@@ -60,7 +59,6 @@ public class AutoSizingCellsDataDelegateProvider: NSObject, UITableViewDelegate,
                 assertionFailure("No matching cell")
             }
         }
-        
         return cellConfigurationForIndexPath.configure(cell!, indexPath)
     }
     

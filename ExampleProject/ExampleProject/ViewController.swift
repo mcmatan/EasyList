@@ -11,12 +11,16 @@ import EasyList
 
 class ViewController: UIViewController {
     var easyList: EasyList?
+    let showAutoSizingCellExample = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        self.setupAutoSizingConfiguration()
-//        self.setupDefaultConfiguration()
+        
+        if (self.showAutoSizingCellExample) {
+            self.setupAutoSizingConfiguration()
+        } else {
+            self.setupDefaultConfiguration()
+        }
         self.view.addSubview(self.easyList!)
         self.easyList?.translatesAutoresizingMaskIntoConstraints = false
         self.view.translatesAutoresizingMaskIntoConstraints = false
@@ -45,17 +49,14 @@ class ViewController: UIViewController {
     }
     
     private func setupAutoSizingConfiguration() {
-        
         let cellConfiguration = CellConfiguration { (cell , indexPath) -> AutoSizingCell in
             cell.setText("blablablablablablablablablablablablablablablablablablablablablablablablablablabla blablablablablablablablablablablablablablablablablablablablablablablablablablabla blablablablablablablablablablablablablablablablablablablablablablablablablablabla blablablablablablablablablablablablablablablablablablablablablablablablablablabla blablablablablablablablablablablablablablablablablablablablablablablablablablabla blablablablablablablablablablablablablablablablablablablablablablablablablablabla")
             return cell
         }
-
         let cellConfiguration2 = CellConfiguration { (cell, indexPath) -> AutoSizingCell2 in
             cell.setText("da   da   da   da   da da   da   da   da   da da   da   da   da   da da   da   da   da   da ")
             return cell
         }
-        
         let config = EasyListConfigurationAutoSizingCells.init(
             cellConfigurationType: { indexPath -> CellConfigurationType in
                 if (indexPath.row == 5) {
@@ -68,7 +69,6 @@ class ViewController: UIViewController {
         }, estimatedHeight: 100) { (cell, indexPath) in
             ///
         }
-        
         self.easyList = EasyList.init(config)
     }
     
