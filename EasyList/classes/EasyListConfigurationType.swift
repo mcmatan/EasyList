@@ -12,6 +12,7 @@ import UIKit
 public typealias SelectedCell = UITableViewCell
 public typealias SelectedIndexPath = IndexPath
 public typealias DidSelectCellBlock = (_ selectedCell: SelectedCell, _ selectedIndexPath: SelectedIndexPath) -> Void
+
 public protocol EasyListConfigurationType: class {
     func getDataSourceAndDelegate() -> UITableViewDelegate & UITableViewDataSource
     func configureTableView(tableView: UITableView)

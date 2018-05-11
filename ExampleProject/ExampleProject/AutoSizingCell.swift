@@ -9,16 +9,16 @@
 import Foundation
 import UIKit
 
-let cellGreenColor = UIColor.init(red: 160/255, green: 196/255, blue: 163/255, alpha: 1)
-let cellPurpleColor = UIColor.init(red: 136/255, green: 119/255, blue: 177/255, alpha: 1)
-let cellOrangeColor = UIColor.init(red: 240/255, green: 183/255, blue: 114/255, alpha: 1)
+let cellGreenColor = UIColor.init(red: 160 / 255, green: 196 / 255, blue: 163 / 255, alpha: 1)
+let cellPurpleColor = UIColor.init(red: 136 / 255, green: 119 / 255, blue: 177 / 255, alpha: 1)
+let cellOrangeColor = UIColor.init(red: 240 / 255, green: 183 / 255, blue: 114 / 255, alpha: 1)
 
 class AutoSizingCell: UITableViewCell {
     let someLabel = UILabel.init()
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-     
+
         self.contentView.addSubview(someLabel)
         someLabel.numberOfLines = 0
         someLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
@@ -29,11 +29,11 @@ class AutoSizingCell: UITableViewCell {
         someLabel.textColor = cellPurpleColor
         someLabel.translatesAutoresizingMaskIntoConstraints = false
     }
-    
+
     func setText(_ text: String) {
         self.someLabel.text = text
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -42,10 +42,10 @@ class AutoSizingCell: UITableViewCell {
 
 class AutoSizingCell2: UITableViewCell {
     let someLabel = UILabel.init()
-    
+
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+
         self.contentView.addSubview(someLabel)
         someLabel.numberOfLines = 0
         someLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
@@ -56,11 +56,11 @@ class AutoSizingCell2: UITableViewCell {
         someLabel.textColor = cellOrangeColor
         someLabel.translatesAutoresizingMaskIntoConstraints = false
     }
-    
+
     func setText(_ text: String) {
         self.someLabel.text = text
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -10,16 +10,16 @@ public class EasyListConfigurationAutoSizingCells: EasyListConfigurationType {
     public let didSelectCellBlock: DidSelectCellBlock
     public let dataSourceCount: () -> Int
     public let estimatedRowsHeight: CGFloat
-    
+
     lazy var dataSourceAndDelegate: UITableViewDelegate & UITableViewDataSource = {
         return AutoSizingCellsDataDelegateProvider(configuration: self)
     }()
-    
+
     public func configureTableView(tableView: UITableView) {
         tableView.estimatedRowHeight = self.estimatedRowsHeight
         tableView.rowHeight = UITableViewAutomaticDimension
     }
-    
+
     public func getDataSourceAndDelegate() -> UITableViewDelegate & UITableViewDataSource {
         return self.dataSourceAndDelegate
     }
@@ -29,7 +29,7 @@ public class EasyListConfigurationAutoSizingCells: EasyListConfigurationType {
             dataSourceCount: @escaping () -> Int,
             estimatedRowsHeight: CGFloat,
             didSelectCellBlock: @escaping DidSelectCellBlock
-                ) {
+    ) {
         self.cellConfigurationType = cellConfiguration
         self.estimatedRowsHeight = estimatedRowsHeight
         self.dataSourceCount = dataSourceCount
@@ -39,15 +39,15 @@ public class EasyListConfigurationAutoSizingCells: EasyListConfigurationType {
 
 public class AutoSizingCellsDataDelegateProvider: NSObject, UITableViewDelegate, UITableViewDataSource {
     weak var configuration: EasyListConfigurationAutoSizingCells!
-    
+
     init(configuration: EasyListConfigurationAutoSizingCells) {
         self.configuration = configuration
     }
-    
+
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.configuration.dataSourceCount()
     }
-    
+
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellConfigurationForIndexPath = self.configuration.cellConfigurationType(indexPath)
         let identifier = String(describing: cellConfigurationForIndexPath.type)
@@ -61,7 +61,7 @@ public class AutoSizingCellsDataDelegateProvider: NSObject, UITableViewDelegate,
         }
         return cellConfigurationForIndexPath.configure(cell!, indexPath)
     }
-    
+
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let isCell = tableView.cellForRow(at: indexPath) {
             self.configuration.didSelectCellBlock(isCell, indexPath)
