@@ -15,8 +15,8 @@ As probably know, using UITableView forces you to implement delegate pattern, sw
 
 EasyList is a new way of dealing with simple to complex table views, with a generic functional approach.
 
-## Usage: EasyListConfigurationDefault
-Supports multiple cell types, static height
+## Basic usage: 
+Configuration type: EasyListConfigurationDefault, Supports multiple cell types, static height
 
 ```Swift
 
@@ -38,8 +38,8 @@ self.easyList = EasyList.init(config)
 
 ```
 
-## Usage: EasyListConfigurationAutoSizingCells
-Supports multiple cell types, dynamic cell height
+## Advanced usage
+Configuration type: EasyListConfigurationAutoSizingCells, Supports multiple cell types, dynamic cell height
 
 ```Swift
 
