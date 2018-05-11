@@ -6,70 +6,82 @@
 <p align = "center"><img src="https://i.imgur.com/GlCRkUL.png" alt="EasyList Icon"/></p>
 
 
-## Description
+## Why EasyList?
 
 
-* **Table view made simple, just load the damn data**
+EasyList is a UITableView subclass, that will help you create type-safe lists, with less code, and easier to read and maintain.
 
-* **Stright forword**
+As you probably know, using UITableView forces you to implement delegate pattern, switch statements (In case of different cell types) force casting (UITableViewCell to your custom cell type), and redundant code as 'cellIdentifier'.
 
-* **Less code, less room for mistakes**
+EasyList is a new way of dealing with simple to complex table views; it wrapped logic for you, so you have a less boilerplate redundant code.
 
-* **Cell reuse mechanism**
-
-* **Supports multiple cell types**
-
-* **Autocomplete, don't re think once again about delegate functions to implement**
-
-## Usage: Defult UITableView
+## Basic usage
+Configuration type: EasyListConfigurationDefault, Supports multiple cell types, static height
 
 ```Swift
 
-self.tableView.delegate = self // and add conform to protocol UITableViewDelegate
-self.tableView.dataSource = self // abd add conform to protocol UITableViewDataSource
-
-self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "identifer")
-
-func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {}
-
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {}
-    
-func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {}
-
-func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
-
-```
-
-And this is without event adding to over head of multiple cell types!!
-
-## Usage: EasyList
-
-```Swift
-
-        let config = EasyListConfiguration.init(
-            cellThemeBlock: { IndexPath -> CellTheme in
-            return CellTheme.init(height: 50,
-            type: UITableViewCell.self,
-            cellIdentifier: "SomeCellIdentifier")
+let cellConfiguration = CellConfiguration { (cell, indexPath) -> YourCustomCell in
+    cell.setText("You know you shook me. You shook me all night long.")
+    return cell
+}
+let config = EasyListConfigurationDefault.init(
+        cellConfiguration: { indexPath -> CellConfigurationType in
+            return cellConfiguration
         }, dataSourceCount: { () -> Int in
-            return 50
-        }, cellSetParamsBlock: { (cell, indexPath) -> UITableViewCell in
-            cell.textLabel?.text = String(indexPath.row)
-            return cell
-        }) { (cell, indexPath) in
-            print("Did select indexPath \(indexPath)")
-        }
-        
-    
-        self.easyList = EasyList.init(config)
-        
+    return 50
+}, rowHeight: { indexPath -> CGFloat in
+    return 50
+}) { (selectedCell, selectedIndexPath) in
+        ///Did select cell
+}
+self.easyList = EasyList.init(config)
+
 ```
 
+## Advanced usage
+Configuration type: EasyListConfigurationAutoSizingCells, Supports multiple cell types, dynamic cell height
+
+```Swift
+
+let cellConfiguration = CellConfiguration { (cell, indexPath) -> YourCustomCell in
+    cell.setText("In the days of my youth, I was told what it means to be a man")
+    return cell
+}
+let cellConfiguration2 = CellConfiguration { (cell, indexPath) -> YourCustomCellWithDinamicSize in
+    cell.setText("Good Times, Bad Times, you know I've had my share")
+    return cell
+}
+let config = EasyListConfigurationAutoSizingCells.init(
+        cellConfiguration: { indexPath -> CellConfigurationType in
+         if (indexPath.row == 5) {
+                return cellConfiguration2
+         }
+          return cellConfiguration 
+        }, dataSourceCount: { () -> Int in
+     return 50
+}, estimatedRowsHeight: 100) { (selectedCell, selectedIndexPath) in
+        ///Did select cell
+}
+self.easyList = EasyList.init(config)
+
+```
+
+## In detail
+
+'CellConfiguration' block is used to define different cell types.
+Set Its return type to your custom cell, and set Its params.
+After creating the amount of cell configuration blocks you need, choose your 'EasyListConfiguration' type:
+- EasyListConfigurationAutoSizingCells for auto sizing cells
+- EasyListConfigurationDefault static cell sizes
+
+Create it, pass CellConfiguration for index path, and the rest of the params (Should be autocompleted)
+
+And you are ready to go! (:
 
 ## Installation
 
 #### Cocoapods
-**ImageScaleTransition** is available through [CocoaPods](http://cocoapods.org). To install
+**EasyList** is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
