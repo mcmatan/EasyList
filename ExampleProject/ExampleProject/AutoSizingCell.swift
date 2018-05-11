@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+let cellGreenColor = UIColor.init(red: 160/255, green: 196/255, blue: 163/255, alpha: 1)
+let cellPurpleColor = UIColor.init(red: 136/255, green: 119/255, blue: 177/255, alpha: 1)
+let cellOrangeColor = UIColor.init(red: 240/255, green: 183/255, blue: 114/255, alpha: 1)
+
 class AutoSizingCell: UITableViewCell {
     let someLabel = UILabel.init()
 
@@ -21,8 +25,8 @@ class AutoSizingCell: UITableViewCell {
         someLabel.leftAnchor.constraint(equalTo: self.contentView.leftAnchor).isActive = true
         someLabel.rightAnchor.constraint(equalTo: self.contentView.rightAnchor).isActive = true
         someLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
-        someLabel.backgroundColor = UIColor.gray
-        someLabel.textColor = UIColor.green
+        someLabel.backgroundColor = cellGreenColor
+        someLabel.textColor = cellPurpleColor
         someLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -48,8 +52,8 @@ class AutoSizingCell2: UITableViewCell {
         someLabel.leftAnchor.constraint(equalTo: self.contentView.leftAnchor).isActive = true
         someLabel.rightAnchor.constraint(equalTo: self.contentView.rightAnchor).isActive = true
         someLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
-        someLabel.backgroundColor = UIColor.blue
-        someLabel.textColor = UIColor.red
+        someLabel.backgroundColor = cellPurpleColor
+        someLabel.textColor = cellOrangeColor
         someLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
