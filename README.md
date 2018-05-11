@@ -11,9 +11,9 @@
 
 EasyList is a UITableView subclass, that will help you create type-safe lists, with less code, and easier to read and maintain.
 
-As probably know, using UITableView forces you to implement delegate pattern, switch statements (In case of different cell types) force casting (UITableViewCell to your custom cell type), and redundant code as 'cell identifier'.
+As you probably know, using UITableView forces you to implement delegate pattern, switch statements (In case of different cell types) force casting (UITableViewCell to your custom cell type), and redundant code as 'cellIdentifier'.
 
-EasyList is a new way of dealing with simple to complex table views, with a generic functional approach.
+EasyList is a new way of dealing with simple to complex table views; it wrapped logic for you, so you have a less boilerplate redundant code.
 
 ## Basic usage
 Configuration type: EasyListConfigurationDefault, Supports multiple cell types, static height
