@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// MARK: Use 'Cell Configuration' every time 'Cell Configuration Type' is referred
 public protocol CellConfigurationType {
     var configure: ((_ cell: UITableViewCell, _ indexPath: IndexPath) -> UITableViewCell) { get }
     var type: Swift.AnyClass { get }

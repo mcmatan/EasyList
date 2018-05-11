@@ -9,14 +9,14 @@ public class EasyListConfigurationAutoSizingCells: EasyListConfigurationType {
     public let cellConfigurationType: (_ indexPath: IndexPath) -> CellConfigurationType
     public let didSelectCellBlock: DidSelectCellBlock
     public let dataSourceCount: () -> Int
-    public let estimatedHeight: CGFloat
+    public let estimatedRowsHeight: CGFloat
     
     lazy var dataSourceAndDelegate: UITableViewDelegate & UITableViewDataSource = {
         return AutoSizingCellsDataDelegateProvider(configuration: self)
     }()
     
     public func configureTableView(tableView: UITableView) {
-        tableView.estimatedRowHeight = self.estimatedHeight
+        tableView.estimatedRowHeight = self.estimatedRowsHeight
         tableView.rowHeight = UITableViewAutomaticDimension
     }
     
@@ -25,13 +25,13 @@ public class EasyListConfigurationAutoSizingCells: EasyListConfigurationType {
     }
 
     public init(
-            cellConfigurationType: @escaping (_ indexPath: IndexPath) -> CellConfigurationType,
+            cellConfiguration: @escaping (_ indexPath: IndexPath) -> CellConfigurationType,
             dataSourceCount: @escaping () -> Int,
-            estimatedHeight: CGFloat,
+            estimatedRowsHeight: CGFloat,
             didSelectCellBlock: @escaping DidSelectCellBlock
                 ) {
-        self.cellConfigurationType = cellConfigurationType
-        self.estimatedHeight = estimatedHeight
+        self.cellConfigurationType = cellConfiguration
+        self.estimatedRowsHeight = estimatedRowsHeight
         self.dataSourceCount = dataSourceCount
         self.didSelectCellBlock = didSelectCellBlock
     }

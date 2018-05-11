@@ -19,7 +19,7 @@ public class EasyListConfigurationDefault: EasyListConfigurationType {
     public let cellConfigurationType: (_ indexPath: IndexPath) -> CellConfigurationType
     public let didSelectCellBlock: DidSelectCellBlock
     public let dataSourceCount: () -> Int
-    public let rowHeight: (_ indexPath: IndexPath) -> CGFloat
+    public let rowHeight: (_ forIndexPath: IndexPath) -> CGFloat
     
     lazy var dataSourceAndDelegate: UITableViewDelegate & UITableViewDataSource = {
         return EasyListConfigurationSimpleDelegateProvider(easyListConfiguration: self)
@@ -33,12 +33,12 @@ public class EasyListConfigurationDefault: EasyListConfigurationType {
         return self.dataSourceAndDelegate
     }
     
-    public init(cellConfigurationType: @escaping (_ indexPath: IndexPath) -> CellConfigurationType,
+    public init(cellConfiguration: @escaping (_ indexPath: IndexPath) -> CellConfigurationType,
                 dataSourceCount: @escaping () -> Int,
-                rowHeight: @escaping (_ indexPath: IndexPath) -> CGFloat,
+                rowHeight: @escaping (_ forIndexPath: IndexPath) -> CGFloat,
                 didSelectCellBlock: @escaping DidSelectCellBlock
         ) {
-        self.cellConfigurationType = cellConfigurationType
+        self.cellConfigurationType = cellConfiguration
         self.dataSourceCount = dataSourceCount
         self.didSelectCellBlock = didSelectCellBlock
         self.rowHeight = rowHeight
