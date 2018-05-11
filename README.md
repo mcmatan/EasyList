@@ -6,7 +6,7 @@
 <p align = "center"><img src="https://i.imgur.com/GlCRkUL.png" alt="EasyList Icon"/></p>
 
 
-## Why EasyList
+## Why EasyList?
 
 
 EasyList is a UITableView subclass, that will help you create type-safe lists, with less code, and easier to read and maintain.
