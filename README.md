@@ -21,7 +21,7 @@ Supports multiple cell types, static height
 ```Swift
 
 let cellConfiguration = CellConfiguration { (cell, indexPath) -> UITableViewCell in
-        cell.textLabel?.text = "You know you shook me. You shook me all night long. You know you shook me, baby. You shook               me all night long. You shook me so hard, baby. Baby, baby, please come home."
+        cell.textLabel?.text = "You know you shook me. You shook me all night long."
         return cell
 }
 let config = EasyListConfigurationDefault.init(
@@ -44,11 +44,11 @@ Supports multiple cell types, dynamic cell height
 ```Swift
 
 let cellConfiguration = CellConfiguration { (cell, indexPath) -> AutoSizingCell in
-         cell.setText("In the days of my youth, I was told what it means to be a man,Now Ive reached that age, I've tried               to do all those things the best I can. No matter how I try, I find my way into the same old jam")
+         cell.setText("In the days of my youth, I was told what it means to be a man")
         return cell
 }
 let cellConfiguration2 = CellConfiguration { (cell, indexPath) -> AutoSizingCell2 in
-        cell.setText("Good Times, Bad Times, you know I've had my share When my woman left home for a brown eyed man,                  Well, I still don't seem to care")
+        cell.setText("Good Times, Bad Times, you know I've had my share")
         return cell
 }
 let config = EasyListConfigurationAutoSizingCells.init(
