@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4292f03b-0ac0-409f-ba3e-eead6ea2c851" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../EasyList/classes/ConfigurationAutoSizingCells.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/ListTypeAutoSizingCells.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EasyList/classes/ConfigurationStaticCellHeight.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeight.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EasyList/classes/ConfigurationType.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/ListType.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EasyList/classes/EasyList.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/EasyList.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExampleProject/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ExampleProject/ViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EasyList/classes/DataSourceDelegateProvider.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeightSectionated.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyList/classes/ListType.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/ListType.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyList/classes/ListTypeAutoSizingCells.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/ListTypeAutoSizingCells.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeight.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeight.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleProject.xcworkspace/xcuserdata/matancohen.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/ExampleProject.xcworkspace/xcuserdata/matancohen.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/ExampleProject-bgcmzgsbagberhfqmgltpkjmfyfh/" />
@@ -20,11 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExampleProject/ViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="67" column="53" lean-forward="true" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
+            <state relative-caret-position="722">
+              <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -50,8 +51,8 @@
       <file leaf-file-name="ListType.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListType.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            <state relative-caret-position="255">
+              <caret line="18" column="83" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -68,10 +69,31 @@
       <file leaf-file-name="ListTypeStaticCellHeight.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeight.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="49" column="19" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+            <state relative-caret-position="322">
+              <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
               <folding>
                 <element signature="e#194#211#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListTypeStaticCellHeightSectionated.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeightSectionated.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataSourceDelegateProvider.swift" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../EasyList/classes/DataSourceDelegateProvider.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding>
+                <element signature="e#45#62#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,8 +114,8 @@
       <file leaf-file-name="ListTypeAutoSizingCells.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListTypeAutoSizingCells.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+            <state relative-caret-position="247">
+              <caret line="40" selection-start-line="40" selection-end-line="72" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -103,8 +125,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>easyL</find>
-      <find>configura</find>
       <find>configur</find>
+      <find>listType</find>
+      <find>configura</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -125,10 +148,12 @@
         <option value="$PROJECT_DIR$/../EasyList/classes/ConfigurationDefault.swift" />
         <option value="$PROJECT_DIR$/../EasyList/classes/ConfigurationAutoSizingCells.swift" />
         <option value="$PROJECT_DIR$/../EasyList/classes/ConfigurationStaticCellHeight.swift" />
-        <option value="$PROJECT_DIR$/../EasyList/classes/ListTypeAutoSizingCells.swift" />
-        <option value="$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeight.swift" />
         <option value="$PROJECT_DIR$/../EasyList/classes/EasyList.swift" />
         <option value="$PROJECT_DIR$/ExampleProject/ViewController.swift" />
+        <option value="$PROJECT_DIR$/../EasyList/classes/ListType.swift" />
+        <option value="$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeight.swift" />
+        <option value="$PROJECT_DIR$/../EasyList/classes/ListTypeAutoSizingCells.swift" />
+        <option value="$PROJECT_DIR$/../EasyList/classes/DataSourceDelegateProvider.swift" />
       </list>
     </option>
   </component>
@@ -206,9 +231,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="EasyList" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -240,12 +265,12 @@
       <option name="presentableId" value="Default" />
       <updated>1516609478424</updated>
       <workItem from="1516609481365" duration="4682000" />
-      <workItem from="1526028169504" duration="4967000" />
+      <workItem from="1526028169504" duration="5973000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9649000" />
+    <option name="totallyTimeSpent" value="10655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -256,7 +281,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.17741935" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.050537635" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -277,6 +302,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ExampleProject/ViewController.swift">
@@ -315,34 +345,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListTypeAutoSizingCells.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeight.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="49" column="19" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-          <folding>
-            <element signature="e#194#211#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyList.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListType.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -358,8 +364,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ExampleProject/ViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="67" column="53" lean-forward="true" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
+        <state relative-caret-position="722">
+          <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListType.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="83" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeight.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+          <folding>
+            <element signature="e#194#211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeightSectionated.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListTypeAutoSizingCells.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="40" selection-start-line="40" selection-end-line="72" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EasyList/classes/DataSourceDelegateProvider.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="e#45#62#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

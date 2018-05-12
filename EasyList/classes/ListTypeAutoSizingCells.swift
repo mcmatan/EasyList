@@ -13,7 +13,7 @@ public class ListTypeAutoSizingCells: ListType {
     public let estimatedRowsHeight: CGFloat
 
     lazy var dataSourceAndDelegate: UITableViewDelegate & UITableViewDataSource = {
-        return ListTypeAutoSizingCellsDataDelegateProvider(listType: self)
+        return ListTypeAutoSizingCellsDataSourceDelegateProvider(listType: self)
     }()
 
     public func configureTableView(tableView: UITableView) {
@@ -38,7 +38,7 @@ public class ListTypeAutoSizingCells: ListType {
     }
 }
 
-private class ListTypeAutoSizingCellsDataDelegateProvider: NSObject, UITableViewDelegate, UITableViewDataSource {
+private class ListTypeAutoSizingCellsDataSourceDelegateProvider: NSObject, UITableViewDelegate, UITableViewDataSource {
     weak var listType: ListTypeAutoSizingCells!
 
     init(listType: ListTypeAutoSizingCells) {
@@ -51,16 +51,8 @@ private class ListTypeAutoSizingCellsDataDelegateProvider: NSObject, UITableView
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellConfigurationForIndexPath = self.listType.cellConfigurationType(indexPath)
-        let identifier = String(describing: cellConfigurationForIndexPath.type)
-        var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
-        if cell === nil {
-            tableView.register(cellConfigurationForIndexPath.type.self, forCellReuseIdentifier: identifier)
-            cell = tableView.dequeueReusableCell(withIdentifier: identifier)
-            if cell === nil {
-                assertionFailure("No matching cell")
-            }
-        }
-        return cellConfigurationForIndexPath.configure(cell!, indexPath)
+        let cell = reuseCellFor(indexPath: indexPath, tableView: tableView, listType: self.listType)
+        return cellConfigurationForIndexPath.configure(cell, indexPath)
     }
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
