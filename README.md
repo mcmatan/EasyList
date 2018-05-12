@@ -9,7 +9,7 @@
 ## Why EasyList?
 
 
-EasyList is a UITableView subclass, that will help you create type-safe lists, with less code, and easier to read and maintain.
+EasyList is a UITableView subclass, that will help you create type-safe lists, with less code, easier to read and maintain.
 
 As you probably know, using UITableView forces you to implement delegate pattern, switch statements (In case of different cell types) force casting (UITableViewCell to your custom cell type), and redundant code as 'cellIdentifier'.
 
@@ -76,9 +76,9 @@ After creating the amount of cell configuration blocks you need, choose your Lis
 
 Create it, pass CellConfiguration for index path, and the rest of the params (Should be autocompleted)
 
-Reload is called as any UITableView (It is at the end, just a tableView) using: "reloadData()"
+Reloading data on change is the same as using UITableView (Because it is, in fact, a UITableView)  call: reloadData()
 
-And you are ready to go! (:
+You are ready to go! (:
 
 ## Installation
 
