@@ -16,7 +16,7 @@ As you probably know, using UITableView forces you to implement delegate pattern
 EasyList is a new way of dealing with simple to complex table views; it wrapped logic for you, so you have a less boilerplate redundant code.
 
 ## Basic usage
-Configuration type: ConfigurationStaticCellHeight, Supports multiple cell types, static height
+ListTypeStaticCellHeight, Supports multiple cell types, static height
 
 ```Swift
 
@@ -24,7 +24,7 @@ let cellConfiguration = CellConfiguration { (cell, indexPath) -> YourCustomCell 
     cell.setText(self.dataSource[indexPath.row])
     return cell
 }
-let config = ConfigurationStaticCellHeight.init(
+let config = ListTypeStaticCellHeight.init(
         cellConfiguration: { indexPath -> CellConfigurationType in
             return cellConfiguration
         }, dataSourceCount: { () -> Int in
@@ -39,7 +39,7 @@ self.easyList = EasyList.init(config)
 ```
 
 ## Advanced usage
-Configuration type: ConfigurationAutoSizingCells, Supports multiple cell types, dynamic cell height
+ListTypeAutoSizingCells, Supports multiple cell types, dynamic cell height
 
 ```Swift
 
@@ -51,7 +51,7 @@ let cellConfiguration2 = CellConfiguration { (cell, indexPath) -> YourCustomCell
     cell.setText(self.dataSource[indexPath.row])
     return cell
 }
-let config = ConfigurationAutoSizingCells.init(
+let config = ListTypeAutoSizingCells.init(
         cellConfiguration: { indexPath -> CellConfigurationType in
          if (indexPath.row == 5) {
                 return cellConfiguration2
@@ -70,9 +70,9 @@ self.easyList = EasyList.init(config)
 
 **CellConfiguration** block is used to define different cell types.
 Set Its return type to your custom cell, and set Its params.
-After creating the amount of cell configuration blocks you need, choose your Configuration type:
-- ConfigurationAutoSizingCells for auto sizing cells
-- ConfigurationStaticCellHeight static cell sizes
+After creating the amount of cell configuration blocks you need, choose your ListType:
+- ListTypeAutoSizingCells for auto sizing cells
+- ListTypeStaticCellHeight static cell sizes
 
 Create it, pass CellConfiguration for index path, and the rest of the params (Should be autocompleted)
 
