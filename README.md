@@ -24,7 +24,7 @@ let cellConfiguration = CellConfiguration { (cell, indexPath) -> YourCustomCell 
     cell.setText(self.dataSource[indexPath.row])
     return cell
 }
-let config = ListTypeStaticCellHeight.init(
+let listType = ListTypeStaticCellHeight.init(
         cellConfiguration: { indexPath -> CellConfigurationType in
             return cellConfiguration
         }, dataSourceCount: { () -> Int in
@@ -34,7 +34,7 @@ let config = ListTypeStaticCellHeight.init(
 }) { (selectedCell, selectedIndexPath) in
         ///Did select cell
 }
-self.easyList = EasyList.init(config)
+self.easyList = EasyList.init(listType)
 
 ```
 
@@ -51,7 +51,7 @@ let cellConfiguration2 = CellConfiguration { (cell, indexPath) -> YourCustomCell
     cell.setText(self.dataSource[indexPath.row])
     return cell
 }
-let config = ListTypeAutoSizingCells.init(
+let listType = ListTypeAutoSizingCells.init(
         cellConfiguration: { indexPath -> CellConfigurationType in
          if (indexPath.row == 5) {
                 return cellConfiguration2
@@ -62,7 +62,7 @@ let config = ListTypeAutoSizingCells.init(
 }, estimatedRowsHeight: 100) { (selectedCell, selectedIndexPath) in
         ///Did select cell
 }
-self.easyList = EasyList.init(config)
+self.easyList = EasyList.init(listType)
 
 ```
 
