@@ -13,7 +13,7 @@ public typealias SelectedCell = UITableViewCell
 public typealias SelectedIndexPath = IndexPath
 public typealias DidSelectCellBlock = (_ selectedCell: SelectedCell, _ selectedIndexPath: SelectedIndexPath) -> Void
 
-public protocol ConfigurationType: class {
+public protocol ListType: class {
     func getDataSourceAndDelegate() -> UITableViewDelegate & UITableViewDataSource
     func configureTableView(tableView: UITableView)
 }

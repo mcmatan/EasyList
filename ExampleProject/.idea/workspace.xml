@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4292f03b-0ac0-409f-ba3e-eead6ea2c851" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../EasyList/classes/ConfigurationAutoSizingCells.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/ListTypeAutoSizingCells.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyList/classes/ConfigurationStaticCellHeight.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeight.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyList/classes/ConfigurationType.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/ListType.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../EasyList/classes/EasyList.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/EasyList.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationAutoSizingCells.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/ConfigurationAutoSizingCells.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationDefault.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/ConfigurationStaticCellHeight.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationType.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyList/classes/ConfigurationType.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExampleProject.xcworkspace/xcuserdata/matancohen.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/ExampleProject.xcworkspace/xcuserdata/matancohen.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExampleProject/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ExampleProject/ViewController.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
     </list>
@@ -25,8 +23,8 @@
       <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ExampleProject/ViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+            <state relative-caret-position="386">
+              <caret line="67" column="53" lean-forward="true" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -49,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigurationType.swift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../EasyList/classes/ConfigurationType.swift">
+      <file leaf-file-name="ListType.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListType.swift">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -61,17 +59,17 @@
       <file leaf-file-name="EasyList.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyList.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="240">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigurationStaticCellHeight.swift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../EasyList/classes/ConfigurationStaticCellHeight.swift">
+      <file leaf-file-name="ListTypeStaticCellHeight.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeight.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="84">
+              <caret line="49" column="19" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
               <folding>
                 <element signature="e#194#211#0" expanded="true" />
               </folding>
@@ -91,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigurationAutoSizingCells.swift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../EasyList/classes/ConfigurationAutoSizingCells.swift">
+      <file leaf-file-name="ListTypeAutoSizingCells.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListTypeAutoSizingCells.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="40" column="105" lean-forward="true" selection-start-line="40" selection-start-column="105" selection-end-line="40" selection-end-column="105" />
+            <state relative-caret-position="765">
+              <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -105,6 +103,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>easyL</find>
+      <find>configura</find>
+      <find>configur</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -125,6 +125,8 @@
         <option value="$PROJECT_DIR$/../EasyList/classes/ConfigurationDefault.swift" />
         <option value="$PROJECT_DIR$/../EasyList/classes/ConfigurationAutoSizingCells.swift" />
         <option value="$PROJECT_DIR$/../EasyList/classes/ConfigurationStaticCellHeight.swift" />
+        <option value="$PROJECT_DIR$/../EasyList/classes/ListTypeAutoSizingCells.swift" />
+        <option value="$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeight.swift" />
         <option value="$PROJECT_DIR$/../EasyList/classes/EasyList.swift" />
         <option value="$PROJECT_DIR$/ExampleProject/ViewController.swift" />
       </list>
@@ -238,12 +240,12 @@
       <option name="presentableId" value="Default" />
       <updated>1516609478424</updated>
       <workItem from="1516609481365" duration="4682000" />
-      <workItem from="1526028169504" duration="4138000" />
+      <workItem from="1526028169504" duration="4967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8820000" />
+    <option name="totallyTimeSpent" value="9649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -254,7 +256,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.02688172" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.17741935" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -284,7 +286,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ConfigurationType.swift">
+    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListType.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
@@ -299,16 +301,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyListConfigurationSimple.swift" />
-    <entry file="file://$PROJECT_DIR$/../EasyList/classes/CellConfiguration.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-          <folding>
-            <element signature="e#90#107#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ExampleProject/AppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -323,41 +315,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ConfigurationType.swift">
+    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListTypeAutoSizingCells.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        <state relative-caret-position="765">
+          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyList.swift">
+    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListTypeStaticCellHeight.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ConfigurationAutoSizingCells.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="40" column="105" lean-forward="true" selection-start-line="40" selection-start-column="105" selection-end-line="40" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ConfigurationStaticCellHeight.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="84">
+          <caret line="49" column="19" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
           <folding>
             <element signature="e#194#211#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../EasyList/classes/EasyList.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EasyList/classes/ListType.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EasyList/classes/CellConfiguration.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding>
+            <element signature="e#90#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ExampleProject/ViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+        <state relative-caret-position="386">
+          <caret line="67" column="53" lean-forward="true" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
         </state>
       </provider>
     </entry>

@@ -1,56 +1,68 @@
 //
-// Created by Matan Cohen on 1/22/18.
+//  ListTypeStaticCellHeight.swift
+//  EasyList
+//
+//  Created by Matan Cohen on 5/9/18.
+//
+
+//
+//  ListTypeAutoSizingCells.swift
+//  EasyList
+//
+//  Created by Matan Cohen on 5/9/18.
 //
 
 import Foundation
 import UIKit
 
-//Supports multiple cell types, dynamic cell height
-public class ConfigurationAutoSizingCells: ConfigurationType {
+//Supports multiple cell types, static height
+public class ListTypeStaticCellHeight: ListType {
     public let cellConfigurationType: (_ indexPath: IndexPath) -> CellConfigurationType
     public let didSelectCellBlock: DidSelectCellBlock
     public let dataSourceCount: () -> Int
-    public let estimatedRowsHeight: CGFloat
+    public let rowHeight: (_ forIndexPath: IndexPath) -> CGFloat
 
     lazy var dataSourceAndDelegate: UITableViewDelegate & UITableViewDataSource = {
-        return AutoSizingCellsDataDelegateProvider(configuration: self)
+        return ListTypeStaticCellHeightDelegateProvider(configuration: self)
     }()
 
     public func configureTableView(tableView: UITableView) {
-        tableView.estimatedRowHeight = self.estimatedRowsHeight
-        tableView.rowHeight = UITableViewAutomaticDimension
+        //
     }
 
     public func getDataSourceAndDelegate() -> UITableViewDelegate & UITableViewDataSource {
         return self.dataSourceAndDelegate
     }
 
-    public init(
-            cellConfiguration: @escaping (_ indexPath: IndexPath) -> CellConfigurationType,
-            dataSourceCount: @escaping () -> Int,
-            estimatedRowsHeight: CGFloat,
-            didSelectCellBlock: @escaping DidSelectCellBlock
+    public init(cellConfiguration: @escaping (_ indexPath: IndexPath) -> CellConfigurationType,
+                dataSourceCount: @escaping () -> Int,
+                rowHeight: @escaping (_ forIndexPath: IndexPath) -> CGFloat,
+                didSelectCellBlock: @escaping DidSelectCellBlock
     ) {
         self.cellConfigurationType = cellConfiguration
-        self.estimatedRowsHeight = estimatedRowsHeight
         self.dataSourceCount = dataSourceCount
         self.didSelectCellBlock = didSelectCellBlock
+        self.rowHeight = rowHeight
     }
 }
 
-private class AutoSizingCellsDataDelegateProvider: NSObject, UITableViewDelegate, UITableViewDataSource {
-    weak var configuration: ConfigurationAutoSizingCells!
+private class ListTypeStaticCellHeightDelegateProvider: NSObject, UITableViewDelegate, UITableViewDataSource {
+    weak var listType: ListTypeStaticCellHeight!
 
-    init(configuration: ConfigurationAutoSizingCells) {
-        self.configuration = configuration
+    init(configuration: ListTypeStaticCellHeight) {
+        self.listType = configuration
+    }
+
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.listType.rowHeight(indexPath)
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.configuration.dataSourceCount()
+        return self.listType.dataSourceCount()
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellConfigurationForIndexPath = self.configuration.cellConfigurationType(indexPath)
+        let cellConfigurationForIndexPath = self.listType.cellConfigurationType(indexPath)
         let identifier = String(describing: cellConfigurationForIndexPath.type)
         var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
         if cell === nil {
@@ -65,7 +77,7 @@ private class AutoSizingCellsDataDelegateProvider: NSObject, UITableViewDelegate
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let isCell = tableView.cellForRow(at: indexPath) {
-            self.configuration.didSelectCellBlock(isCell, indexPath)
+            self.listType.didSelectCellBlock(isCell, indexPath)
         } else {
             print("ERROR: EasyList did select unknown cell")
         }

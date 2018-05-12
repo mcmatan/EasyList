@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             cell.textLabel?.text = self.dataSource[indexPath.row]
             return cell
         }
-        let config = ConfigurationStaticCellHeight.init(
+        let listType = ListTypeStaticCellHeight.init(
                 cellConfiguration: { indexPath -> CellConfigurationType in
                     return cellConfiguration
                 }, dataSourceCount: { () -> Int in
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         }) { (selectedCell, selectedIndexPath) in
             //
         }
-        self.easyList = EasyList.init(config)
+        self.easyList = EasyList.init(listType)
     }
 
     private func setupAutoSizingConfiguration() {
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
             cell.setText(text)
             return cell
         }
-        let config = ConfigurationAutoSizingCells.init(
+        let listType = ListTypeAutoSizingCells.init(
                 cellConfiguration: { indexPath -> CellConfigurationType in
                     if (indexPath.row == 5) {
                         return cellConfiguration2
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
         }, estimatedRowsHeight: 100) { (selectedCell, selectedIndexPath) in
             ///
         }
-        self.easyList = EasyList.init(config)
+        self.easyList = EasyList.init(listType)
     }
 
     func dataSourceCount() -> Int {
