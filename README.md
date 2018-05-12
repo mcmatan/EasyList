@@ -16,7 +16,7 @@ As you probably know, using UITableView forces you to implement delegate pattern
 EasyList is a new way of dealing with simple to complex table views; it wrapped logic for you, so you have a less boilerplate redundant code.
 
 ## Basic usage
-Configuration type: EasyListConfigurationDefault, Supports multiple cell types, static height
+Configuration type: ConfigurationStaticCellHeight, Supports multiple cell types, static height
 
 ```Swift
 
@@ -24,7 +24,7 @@ let cellConfiguration = CellConfiguration { (cell, indexPath) -> YourCustomCell 
     cell.setText(self.dataSource[indexPath.row])
     return cell
 }
-let config = EasyListConfigurationDefault.init(
+let config = ConfigurationStaticCellHeight.init(
         cellConfiguration: { indexPath -> CellConfigurationType in
             return cellConfiguration
         }, dataSourceCount: { () -> Int in
@@ -39,7 +39,7 @@ self.easyList = EasyList.init(config)
 ```
 
 ## Advanced usage
-Configuration type: EasyListConfigurationAutoSizingCells, Supports multiple cell types, dynamic cell height
+Configuration type: ConfigurationAutoSizingCells, Supports multiple cell types, dynamic cell height
 
 ```Swift
 
@@ -51,7 +51,7 @@ let cellConfiguration2 = CellConfiguration { (cell, indexPath) -> YourCustomCell
     cell.setText(self.dataSource[indexPath.row])
     return cell
 }
-let config = EasyListConfigurationAutoSizingCells.init(
+let config = ConfigurationAutoSizingCells.init(
         cellConfiguration: { indexPath -> CellConfigurationType in
          if (indexPath.row == 5) {
                 return cellConfiguration2
@@ -68,11 +68,11 @@ self.easyList = EasyList.init(config)
 
 ## In detail
 
-'CellConfiguration' block is used to define different cell types.
+**CellConfiguration** block is used to define different cell types.
 Set Its return type to your custom cell, and set Its params.
-After creating the amount of cell configuration blocks you need, choose your 'EasyListConfiguration' type:
-- EasyListConfigurationAutoSizingCells for auto sizing cells
-- EasyListConfigurationDefault static cell sizes
+After creating the amount of cell configuration blocks you need, choose your Configuration type:
+- ConfigurationAutoSizingCells for auto sizing cells
+- ConfigurationStaticCellHeight static cell sizes
 
 Create it, pass CellConfiguration for index path, and the rest of the params (Should be autocompleted)
 
