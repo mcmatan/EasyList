@@ -1,12 +1,12 @@
 //
-//  EasyListConfigurationDefault.swift
+//  ConfigurationStaticCellHeight.swift
 //  EasyList
 //
 //  Created by Matan Cohen on 5/9/18.
 //
 
 //
-//  EasyListConfigurationAutoSizingCells.swift
+//  ConfigurationAutoSizingCells.swift
 //  EasyList
 //
 //  Created by Matan Cohen on 5/9/18.
@@ -16,14 +16,14 @@ import Foundation
 import UIKit
 
 //Supports multiple cell types, static height
-public class EasyListConfigurationDefault: EasyListConfigurationType {
+public class ConfigurationStaticCellHeight: ConfigurationType {
     public let cellConfigurationType: (_ indexPath: IndexPath) -> CellConfigurationType
     public let didSelectCellBlock: DidSelectCellBlock
     public let dataSourceCount: () -> Int
     public let rowHeight: (_ forIndexPath: IndexPath) -> CGFloat
 
     lazy var dataSourceAndDelegate: UITableViewDelegate & UITableViewDataSource = {
-        return EasyListConfigurationSimpleDelegateProvider(easyListConfiguration: self)
+        return ConfigurationStaticCellHeightDelegateProvider(configuration: self)
     }()
 
     public func configureTableView(tableView: UITableView) {
@@ -46,11 +46,11 @@ public class EasyListConfigurationDefault: EasyListConfigurationType {
     }
 }
 
-public class EasyListConfigurationSimpleDelegateProvider: NSObject, UITableViewDelegate, UITableViewDataSource {
-    weak var configuration: EasyListConfigurationDefault!
+private class ConfigurationStaticCellHeightDelegateProvider: NSObject, UITableViewDelegate, UITableViewDataSource {
+    weak var configuration: ConfigurationStaticCellHeight!
 
-    init(easyListConfiguration: EasyListConfigurationDefault) {
-        self.configuration = easyListConfiguration
+    init(configuration: ConfigurationStaticCellHeight) {
+        self.configuration = configuration
     }
 
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -79,7 +79,7 @@ public class EasyListConfigurationSimpleDelegateProvider: NSObject, UITableViewD
         if let isCell = tableView.cellForRow(at: indexPath) {
             self.configuration.didSelectCellBlock(isCell, indexPath)
         } else {
-            print("ERROR: EasyList did select unkown cell")
+            print("ERROR: EasyList did select unknown cell")
         }
     }
 }

@@ -10,24 +10,24 @@ import Foundation
 import UIKit
 
 public protocol EasyListType {
-    init(tableConfiguration: EasyListConfigurationType)
+    init(tableConfiguration: ConfigurationType)
 }
 
 public class EasyList: UITableView {
-    private var easyListConfigurationType: EasyListConfigurationType?
+    private var configurationType: ConfigurationType?
 
-    public init(_ easyListConfigurationType: EasyListConfigurationType? = nil) {
+    public init(_ configurationType: ConfigurationType? = nil) {
         super.init(frame: .zero, style: .plain)
-        if let isConfig = easyListConfigurationType {
+        if let isConfig = configurationType {
             self.setConfiguration(isConfig)
         }
     }
 
-    public func setConfiguration(_ easyListConfigurationType: EasyListConfigurationType) {
-        self.easyListConfigurationType = easyListConfigurationType
-        self.delegate = self.easyListConfigurationType!.getDataSourceAndDelegate()
-        self.dataSource = self.easyListConfigurationType!.getDataSourceAndDelegate()
-        self.easyListConfigurationType!.configureTableView(tableView: self)
+    public func setConfiguration(_ configurationType: ConfigurationType) {
+        self.configurationType = configurationType
+        self.delegate = self.configurationType!.getDataSourceAndDelegate()
+        self.dataSource = self.configurationType!.getDataSourceAndDelegate()
+        self.configurationType!.configureTableView(tableView: self)
     }
 
     required public init?(coder aDecoder: NSCoder) {

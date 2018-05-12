@@ -41,13 +41,11 @@ class ViewController: UIViewController {
     }
 
     private func setupDefaultConfiguration() {
-        
         let cellConfiguration = CellConfiguration { (cell, indexPath) -> UITableViewCell in
             cell.textLabel?.text = self.dataSource[indexPath.row]
             return cell
         }
-
-        let config = EasyListConfigurationDefault.init(
+        let config = ConfigurationStaticCellHeight.init(
                 cellConfiguration: { indexPath -> CellConfigurationType in
                     return cellConfiguration
                 }, dataSourceCount: { () -> Int in
@@ -71,7 +69,7 @@ class ViewController: UIViewController {
             cell.setText(text)
             return cell
         }
-        let config = EasyListConfigurationAutoSizingCells.init(
+        let config = ConfigurationAutoSizingCells.init(
                 cellConfiguration: { indexPath -> CellConfigurationType in
                     if (indexPath.row == 5) {
                         return cellConfiguration2
@@ -84,7 +82,6 @@ class ViewController: UIViewController {
             ///
         }
         self.easyList = EasyList.init(config)
-        
     }
 
     func dataSourceCount() -> Int {
